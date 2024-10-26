@@ -1,6 +1,7 @@
 // src/components/HomePage.js
 import React, { useEffect, useState } from 'react';
 import './HomePage.css';
+import { Link } from 'react-router-dom';
 
 // Import Font Awesome components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -130,12 +131,11 @@ const HomePage = () => {
             <FontAwesomeIcon icon="robot" className="unauth-header-icon" /> Actually Build Backend Apps Using AI
           </h1>
           <p>Leverage the power of AI to streamline your backend development process.</p>
-          <button className="unauth-cta-button" onClick={() => handleNavClick('cta')}>
-            Watch Series
-          </button>
+          <Link to="/signup" className="unauth-cta-button">
+            Let's get started ☕
+          </Link>
         </div>
       </header>
-
       {/* Scrolling Text Banner */}
       <section className="unauth-scrolling-banner">
         <div className="scrolling-text">
@@ -234,9 +234,9 @@ const HomePage = () => {
       {/* Call to Action Section */}
       <section className="unauth-cta" id="cta">
         <h2>Ready to Transform Your Backend Development?</h2>
-        <button className="unauth-cta-button" onClick={() => window.location.href = 'https://youtube.com/yourchannel'}>
-          Subscribe on YouTube
-        </button>
+        <Link to="/signup" className="unauth-cta-button">
+          Sign Up Now
+        </Link>
       </section>
 
       {/* Footer */}
