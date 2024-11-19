@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "actual-backend-app"
-  }
+    "default": "actual-backend-app",
+    "qa": "actual-backend-app"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
