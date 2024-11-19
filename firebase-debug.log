@@ -1,0 +1,398 @@
+[debug] [2024-11-19T18:21:52.550Z] ----------------------------------------------------------------------
+[debug] [2024-11-19T18:21:52.553Z] Command:       /opt/homebrew/Cellar/node/22.8.0/bin/node /Users/coffeefuel/.npm-global/bin/firebase emulators:start
+[debug] [2024-11-19T18:21:52.554Z] CLI Version:   13.23.0
+[debug] [2024-11-19T18:21:52.554Z] Platform:      darwin
+[debug] [2024-11-19T18:21:52.555Z] Node Version:  v22.8.0
+[debug] [2024-11-19T18:21:52.555Z] Time:          Tue Nov 19 2024 12:21:52 GMT-0600 (Central Standard Time)
+[debug] [2024-11-19T18:21:52.555Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-19T18:21:52.562Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-11-19T18:21:52.645Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-19T18:21:52.645Z] > authorizing via signed-in user (contact@webcafeai.com)
+[debug] [2024-11-19T18:21:52.790Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-11-19T18:21:52.790Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-11-19T18:21:53.258Z] openjdk version "11.0.24" 2024-07-16
+
+[debug] [2024-11-19T18:21:53.259Z] OpenJDK Runtime Environment Homebrew (build 11.0.24+0)
+OpenJDK 64-Bit Server VM Homebrew (build 11.0.24+0, mixed mode)
+
+[debug] [2024-11-19T18:21:53.261Z] Parsed Java major version: 11
+[info] i  emulators: Starting emulators: auth, functions, firestore, hosting, pubsub, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting, pubsub, extensions"}}
+[debug] [2024-11-19T18:21:53.264Z] Checked if tokens are valid: false, expires at: 1730045576321
+[debug] [2024-11-19T18:21:53.264Z] Checked if tokens are valid: false, expires at: 1730045576321
+[debug] [2024-11-19T18:21:53.264Z] > refreshing access token with scopes: []
+[debug] [2024-11-19T18:21:53.264Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-19T18:21:53.264Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-19T18:21:53.373Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-11-19T18:21:53.373Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-19T18:21:53.374Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[error] ⬢  extensions: Unable to look up project number for actual-backend-app.
+ If this is a real project, ensure that you are logged in and have access to it.
+ If this is a fake project, please use a project ID starting with 'demo-' to skip production calls.
+ Continuing with a fake project number - secrets and other features that require production access may behave unexpectedly. {"metadata":{"emulator":{"name":"extensions"},"message":"Unable to look up project number for actual-backend-app.\n If this is a real project, ensure that you are logged in and have access to it.\n If this is a fake project, please use a project ID starting with 'demo-' to skip production calls.\n Continuing with a fake project number - secrets and other features that require production access may behave unexpectedly."}}
+[debug] [2024-11-19T18:21:54.499Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-11-19T18:21:54.499Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-11-19T18:21:54.499Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-11-19T18:21:54.499Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-11-19T18:21:54.499Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-11-19T18:21:54.499Z] [pubsub] Pub/Sub Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-11-19T18:21:54.499Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-11-19T18:21:54.502Z] [hub] writing locator at /var/folders/_l/v3h37b_s1_zbktxm1w8m6rbm0000gq/T/hub-actual-backend-app.json
+[debug] [2024-11-19T18:21:54.504Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2024-11-19T18:21:54.923Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-11-19T18:21:54.923Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-11-19T18:21:54.923Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-11-19T18:21:54.923Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: database, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdatabase, storage, dataconnect\u001b[22m"}}
+[debug] [2024-11-19T18:21:54.926Z] defaultcredentials: writing to file /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json
+[debug] [2024-11-19T18:21:54.928Z] Setting GAC to /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json"}}
+[debug] [2024-11-19T18:21:54.929Z] Checked if tokens are valid: false, expires at: 1730045576321
+[debug] [2024-11-19T18:21:54.929Z] Checked if tokens are valid: false, expires at: 1730045576321
+[debug] [2024-11-19T18:21:54.929Z] > refreshing access token with scopes: []
+[debug] [2024-11-19T18:21:54.929Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-19T18:21:54.929Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-19T18:21:54.989Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-11-19T18:21:54.989Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-19T18:21:54.989Z] Failed to get Admin SDK config for actual-backend-app, falling back to cache Failed to get Admin SDK for Firebase project actual-backend-app. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project actual-backend-app. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"exit":1,"message":"Authentication Error: Your credentials are no longer valid. Please run \u001b[1mfirebase login --reauth\u001b[22m\n\nFor CI servers and headless environments, generate a new token with \u001b[1mfirebase login:ci\u001b[22m","status":500},"status":500}
+[debug] [2024-11-19T18:21:54.996Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-11-19T18:21:54.996Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2024-11-19T18:21:54.996Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/coffeefuel/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","actual-backend-app","--rules","/Users/coffeefuel/actual-backend-app/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/coffeefuel/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"actual-backend-app\",\"--rules\",\"/Users/coffeefuel/actual-backend-app/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2024-11-19T18:21:55.893Z] Nov 19, 2024 12:21:55 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:21:55 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2024-11-19T18:21:55.906Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2024-11-19T18:21:55.906Z] 127.0.0.1:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2024-11-19T18:21:58.052Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-11-19T18:21:58.052Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-11-19T18:21:58.052Z] Starting Pub/Sub Emulator with command {"binary":"/Users/coffeefuel/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=127.0.0.1","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true,"shell":true,"port":8085} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"/Users/coffeefuel/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/bin/cloud-pubsub-emulator\",\"args\":[\"--host=127.0.0.1\",\"--port=8085\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true,\"shell\":true,\"port\":8085}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2024-11-19T18:21:58.199Z] This is the Google Pub/Sub fake.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"This is the Google Pub/Sub fake.\n"}}
+[debug] [2024-11-19T18:21:58.199Z] Implementation may be incomplete or differ from the real system.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Implementation may be incomplete or differ from the real system.\n"}}
+[debug] [2024-11-19T18:21:58.221Z] Nov 19, 2024 12:21:58 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Nov 19, 2024 12:21:58 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported\n"}}
+[debug] [2024-11-19T18:21:58.297Z] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation {"metadata":{"emulator":{"name":"pubsub"},"message":"SLF4J: Failed to load class \"org.slf4j.impl.StaticLoggerBinder\".\nSLF4J: Defaulting to no-operation (NOP) logger implementation"}}
+[debug] [2024-11-19T18:21:58.297Z] 
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"\nSLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.\n"}}
+[debug] [2024-11-19T18:21:58.513Z] Nov 19, 2024 12:21:58 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 8085
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Nov 19, 2024 12:21:58 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: Server started, listening on 8085\n"}}
+[debug] [2024-11-19T18:21:58.659Z] Checked if tokens are valid: false, expires at: 1730045576321
+[debug] [2024-11-19T18:21:58.659Z] Checked if tokens are valid: false, expires at: 1730045576321
+[debug] [2024-11-19T18:21:58.659Z] > refreshing access token with scopes: []
+[debug] [2024-11-19T18:21:58.659Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-19T18:21:58.659Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-19T18:21:58.722Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-11-19T18:21:58.722Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-19T18:21:58.722Z] Failed to list hosting sites
+[debug] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2024-11-19T18:21:58.722Z] Checked if tokens are valid: false, expires at: 1730045576321
+[debug] [2024-11-19T18:21:58.722Z] Checked if tokens are valid: false, expires at: 1730045576321
+[debug] [2024-11-19T18:21:58.722Z] > refreshing access token with scopes: []
+[debug] [2024-11-19T18:21:58.722Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-19T18:21:58.722Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-19T18:21:58.805Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-11-19T18:21:58.806Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-19T18:21:58.806Z] fetchWebSetup error: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[warn] ⚠  hosting: Using web app configuration from cache. 
+[debug] [2024-11-19T18:21:58.808Z] Checked if tokens are valid: false, expires at: 1730045576321
+[debug] [2024-11-19T18:21:58.808Z] Checked if tokens are valid: false, expires at: 1730045576321
+[debug] [2024-11-19T18:21:58.809Z] > refreshing access token with scopes: []
+[debug] [2024-11-19T18:21:58.809Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-19T18:21:58.810Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-19T18:21:58.885Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-11-19T18:21:58.885Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-19T18:21:58.885Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[info] i  hosting[actual-backend-app]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[actual-backend-app]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2024-11-19T18:21:58.989Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-11-19T18:21:58.989Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-11-19T18:21:58.989Z] Starting Emulator UI with command {"binary":"node","args":["/Users/coffeefuel/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false,"port":4000} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/coffeefuel/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false,\"port\":4000}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-11-19T18:21:59.082Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-11-19T18:21:59.082Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[debug] [2024-11-19T18:21:59.192Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "/Users/coffeefuel/actual-backend-app/function" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/coffeefuel/actual-backend-app/function\" for Cloud Functions..."}}
+[debug] [2024-11-19T18:21:59.197Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-11-19T18:21:59.782Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^5.1.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-11-19T18:21:59.782Z] Building nodejs source
+[debug] [2024-11-19T18:21:59.782Z] Failed to find version of module node: reached end of search path /Users/coffeefuel/actual-backend-app/function/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-11-19T18:21:59.784Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-19T18:21:59.789Z] Found firebase-functions binary at '/Users/coffeefuel/actual-backend-app/function/node_modules/.bin/firebase-functions'
+[debug] [2024-11-19T18:21:59.897Z] Nov 19, 2024 12:21:59 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:21:59 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[info] Serving at port 8963
+
+[debug] [2024-11-19T18:22:01.645Z] Got response from /__/functions.yaml {"endpoints":{"onUserCreate":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","eventFilters":{"resource":"projects/actual-backend-app"},"retry":false},"labels":{},"entryPoint":"onUserCreate"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2024-11-19T18:22:04.005Z] Nov 19, 2024 12:22:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:22:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:22:04.103Z] Nov 19, 2024 12:22:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:22:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:22:06.679Z] defaultcredentials: writing to file /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json
+[debug] [2024-11-19T18:22:06.681Z] Setting GAC to /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: onUserCreate. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: onUserCreate."}}
+[debug] [2024-11-19T18:22:06.684Z] addAuthTrigger {"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","resource":"projects/actual-backend-app"}}
+[info] ✔  functions[us-central1-onUserCreate]: auth function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mauth\u001b[22m function initialized."}}
+[debug] [2024-11-19T18:22:06.690Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth       │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:5000 │ n/a                              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Pub/Sub        │ 127.0.0.1:8085 │ n/a                              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions     │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-11-19T18:22:23.162Z] File /Users/coffeefuel/actual-backend-app/function/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/coffeefuel/actual-backend-app/function/index.js changed, reloading triggers"}}
+[debug] [2024-11-19T18:22:24.163Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-11-19T18:22:24.570Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^5.1.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-11-19T18:22:24.570Z] Building nodejs source
+[debug] [2024-11-19T18:22:24.570Z] Failed to find version of module node: reached end of search path /Users/coffeefuel/actual-backend-app/function/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-11-19T18:22:24.571Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-19T18:22:24.571Z] Found firebase-functions binary at '/Users/coffeefuel/actual-backend-app/function/node_modules/.bin/firebase-functions'
+[info] Serving at port 8277
+
+[debug] [2024-11-19T18:22:24.764Z] Got response from /__/functions.yaml {"endpoints":{"onUserCreate":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","eventFilters":{"resource":"projects/actual-backend-app"},"retry":false},"labels":{},"entryPoint":"onUserCreate"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2024-11-19T18:22:29.774Z] defaultcredentials: writing to file /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json
+[debug] [2024-11-19T18:22:29.775Z] Setting GAC to /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: onUserCreate. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: onUserCreate."}}
+[debug] [2024-11-19T18:23:03.352Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast [none]
+[debug] [2024-11-19T18:23:03.352Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast {"eventId":"7f59a590-d85d-427e-b042-4fae1d592a61","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/actual-backend-app","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-11-19T18:23:03.351Z","data":{"uid":"DCufNlGTx2WTpXTnzq1UhUFSM2ii","email":"algae.orange.780@example.com","emailVerified":true,"displayName":"Algae Orange","metadata":{"creationTime":"2024-11-19T18:23:03.350Z","lastSignInTime":"2024-11-19T18:23:03.350Z"},"customClaims":{},"providerData":[{"providerId":"google.com","rawId":"5048399168866711109662979411895844601891","federatedId":"5048399168866711109662979411895844601891","displayName":"Algae Orange","email":"algae.orange.780@example.com","screenName":"orange_algae"}]}}
+[debug] [2024-11-19T18:23:03.361Z] [work-queue] {"queuedWork":["us-central1-onUserCreate-0-2024-11-19T18:23:03.361Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-19T18:23:03.362Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["us-central1-onUserCreate-0-2024-11-19T18:23:03.361Z"],"workRunningCount":1}
+[debug] [2024-11-19T18:23:03.363Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-19T18:23:03.365Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast 200
+[debug] [2024-11-19T18:23:03.365Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-11-19T18:23:03.369Z] [work-queue] {"queuedWork":["/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0-2024-11-19T18:23:03.369Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-19T18:23:03.369Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0-2024-11-19T18:23:03.369Z"],"workRunningCount":1}
+[debug] [2024-11-19T18:23:03.370Z] Accepted request POST /functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0 --> us-central1-onUserCreate-0
+[debug] [2024-11-19T18:23:03.372Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-11-19T18:23:03.372Z] [functions] Got req.url=/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0, mapping to path=/functions/projects/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0, mapping to path=/functions/projects/"}}
+[debug] [2024-11-19T18:23:03.377Z] [worker-pool] addWorker(us-central1-onUserCreate) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-onUserCreate)"}}
+[debug] [2024-11-19T18:23:03.378Z] [worker-pool] Adding worker with key us-central1-onUserCreate, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-onUserCreate, total=1"}}
+[debug] [2024-11-19T18:23:03.394Z] Nov 19, 2024 12:23:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:23:03.648Z] Nov 19, 2024 12:23:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:23:03.657Z] Nov 19, 2024 12:23:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[info] >  (node:9980) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:9980) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:9980) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2024-11-19T18:23:03.939Z] [runtime-status] [9980] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-11-19T18:23:03.939Z] [runtime-status] [9980] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.1.1\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-11-19T18:23:03.940Z] [runtime-status] [9980] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-11-19T18:23:03.940Z] [runtime-status] [9980] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.1.1\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-11-19T18:23:04.036Z] [runtime-status] [9980] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-11-19T18:23:04.036Z] [runtime-status] [9980] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"5.1.1\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-11-19T18:23:04.036Z] [runtime-status] [9980] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.1.1\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-11-19T18:23:04.037Z] [runtime-status] [9980] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-11-19T18:23:04.037Z] [runtime-status] [9980] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.1.1\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-11-19T18:23:04.037Z] [runtime-status] [9980] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-11-19T18:23:04.038Z] [runtime-status] [9980] initializeApp(DEFAULT) {"storageBucket":"actual-backend-app.appspot.com","projectId":"actual-backend-app"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] initializeApp(DEFAULT) {\"storageBucket\":\"actual-backend-app.appspot.com\",\"projectId\":\"actual-backend-app\"}"}}
+[debug] [2024-11-19T18:23:04.040Z] [runtime-status] [9980] Functions runtime initialized. {"cwd":"/Users/coffeefuel/actual-backend-app/function","node_version":"22.8.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] Functions runtime initialized. {\"cwd\":\"/Users/coffeefuel/actual-backend-app/function\",\"node_version\":\"22.8.0\"}"}}
+[debug] [2024-11-19T18:23:04.041Z] [runtime-status] [9980] Listening to port: /var/folders/_l/v3h37b_s1_zbktxm1w8m6rbm0000gq/T/fire_emu_a46f1b6445f578ba.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] Listening to port: /var/folders/_l/v3h37b_s1_zbktxm1w8m6rbm0000gq/T/fire_emu_a46f1b6445f578ba.sock"}}
+[debug] [2024-11-19T18:23:04.091Z] [worker-us-central1-onUserCreate-bb3fbc18-d11e-410f-8807-d74d17c26592]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[worker-us-central1-onUserCreate-bb3fbc18-d11e-410f-8807-d74d17c26592]: IDLE"}}
+[debug] [2024-11-19T18:23:04.091Z] [worker-pool] submitRequest(triggerId=us-central1-onUserCreate) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-onUserCreate)"}}
+[info] i  functions: Beginning execution of "us-central1-onUserCreate" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Beginning execution of \"us-central1-onUserCreate\""}}
+[debug] [2024-11-19T18:23:04.092Z] [worker-us-central1-onUserCreate-bb3fbc18-d11e-410f-8807-d74d17c26592]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[worker-us-central1-onUserCreate-bb3fbc18-d11e-410f-8807-d74d17c26592]: BUSY"}}
+[debug] [2024-11-19T18:23:04.097Z] [runtime-status] [9980] ProcessBackground: lifting resource.name from resource {"name":"projects/actual-backend-app","service":"firebaseauth.googleapis.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] ProcessBackground: lifting resource.name from resource {\"name\":\"projects/actual-backend-app\",\"service\":\"firebaseauth.googleapis.com\"}"}}
+[debug] [2024-11-19T18:23:04.097Z] [runtime-status] [9980] RunBackground {"data":{"uid":"DCufNlGTx2WTpXTnzq1UhUFSM2ii","email":"algae.orange.780@example.com","emailVerified":true,"displayName":"Algae Orange","metadata":{"creationTime":"2024-11-19T18:23:03.350Z","lastSignInTime":"2024-11-19T18:23:03.350Z"},"customClaims":{},"providerData":[{"providerId":"google.com","rawId":"5048399168866711109662979411895844601891","federatedId":"5048399168866711109662979411895844601891","displayName":"Algae Orange","email":"algae.orange.780@example.com","screenName":"orange_algae"}]},"context":{"eventId":"7f59a590-d85d-427e-b042-4fae1d592a61","eventType":"providers/firebase.auth/eventTypes/user.create","resource":"projects/actual-backend-app","params":{},"timestamp":"2024-11-19T18:23:03.351Z"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] RunBackground {\"data\":{\"uid\":\"DCufNlGTx2WTpXTnzq1UhUFSM2ii\",\"email\":\"algae.orange.780@example.com\",\"emailVerified\":true,\"displayName\":\"Algae Orange\",\"metadata\":{\"creationTime\":\"2024-11-19T18:23:03.350Z\",\"lastSignInTime\":\"2024-11-19T18:23:03.350Z\"},\"customClaims\":{},\"providerData\":[{\"providerId\":\"google.com\",\"rawId\":\"5048399168866711109662979411895844601891\",\"federatedId\":\"5048399168866711109662979411895844601891\",\"displayName\":\"Algae Orange\",\"email\":\"algae.orange.780@example.com\",\"screenName\":\"orange_algae\"}]},\"context\":{\"eventId\":\"7f59a590-d85d-427e-b042-4fae1d592a61\",\"eventType\":\"providers/firebase.auth/eventTypes/user.create\",\"resource\":\"projects/actual-backend-app\",\"params\":{},\"timestamp\":\"2024-11-19T18:23:03.351Z\"}}"}}
+[info] >  New user created: UID=DCufNlGTx2WTpXTnzq1UhUFSM2ii, Email=algae.orange.780@example.com {"user":"New user created: UID=DCufNlGTx2WTpXTnzq1UhUFSM2ii, Email=algae.orange.780@example.com","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"\u001b[90m> \u001b[39m New user created: UID=DCufNlGTx2WTpXTnzq1UhUFSM2ii, Email=algae.orange.780@example.com"}}
+[debug] [2024-11-19T18:23:05.096Z] Nov 19, 2024 12:23:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:23:05.141Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-onUserCreate" in 1049.590917ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finished \"us-central1-onUserCreate\" in 1049.590917ms"}}
+[debug] [2024-11-19T18:23:05.141Z] [worker-us-central1-onUserCreate-bb3fbc18-d11e-410f-8807-d74d17c26592]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[worker-us-central1-onUserCreate-bb3fbc18-d11e-410f-8807-d74d17c26592]: IDLE"}}
+[debug] [2024-11-19T18:23:05.141Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-11-19T18:23:05.141Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-11-19T18:23:05.141Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-19T18:23:05.266Z] Nov 19, 2024 12:23:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:23:05.285Z] Nov 19, 2024 12:23:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:23:05.292Z] Nov 19, 2024 12:23:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:23:11.501Z] Nov 19, 2024 12:23:11 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:11 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:23:11.565Z] Nov 19, 2024 12:23:11 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:11 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:23:11.603Z] Nov 19, 2024 12:23:11 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:11 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:23:37.736Z] Nov 19, 2024 12:23:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Nov 19, 2024 12:23:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nNov 19, 2024 12:23:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:23:54.340Z] Nov 19, 2024 12:23:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:23:54.370Z] Nov 19, 2024 12:23:54 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:23:54 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2024-11-19T18:24:01.532Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast [none]
+[debug] [2024-11-19T18:24:01.533Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast {"eventId":"85a8a0c9-a738-4140-8608-76e18237e25b","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/actual-backend-app","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-11-19T18:24:01.532Z","data":{"uid":"rJwbTgLvqUmv1mi7a3LaCSSRKJFa","email":"otter.olive.931@example.com","emailVerified":true,"displayName":"Otter Olive","metadata":{"creationTime":"2024-11-19T18:24:01.532Z","lastSignInTime":"2024-11-19T18:24:01.532Z"},"customClaims":{},"providerData":[{"providerId":"google.com","rawId":"1153141376503260762050582426787344491142","federatedId":"1153141376503260762050582426787344491142","displayName":"Otter Olive","email":"otter.olive.931@example.com","screenName":"olive_otter"}]}}
+[debug] [2024-11-19T18:24:01.541Z] [work-queue] {"queuedWork":["us-central1-onUserCreate-0-2024-11-19T18:24:01.540Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-19T18:24:01.541Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["us-central1-onUserCreate-0-2024-11-19T18:24:01.540Z"],"workRunningCount":1}
+[debug] [2024-11-19T18:24:01.542Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-19T18:24:01.545Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast 200
+[debug] [2024-11-19T18:24:01.546Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-11-19T18:24:01.546Z] [work-queue] {"queuedWork":["/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0-2024-11-19T18:24:01.546Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-19T18:24:01.547Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0-2024-11-19T18:24:01.546Z"],"workRunningCount":1}
+[debug] [2024-11-19T18:24:01.547Z] Accepted request POST /functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0 --> us-central1-onUserCreate-0
+[debug] [2024-11-19T18:24:01.551Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-11-19T18:24:01.551Z] [functions] Got req.url=/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0, mapping to path=/functions/projects/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0, mapping to path=/functions/projects/"}}
+[debug] [2024-11-19T18:24:01.552Z] [worker-pool] submitRequest(triggerId=us-central1-onUserCreate) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-onUserCreate)"}}
+[info] i  functions: Beginning execution of "us-central1-onUserCreate" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Beginning execution of \"us-central1-onUserCreate\""}}
+[debug] [2024-11-19T18:24:01.553Z] [worker-us-central1-onUserCreate-bb3fbc18-d11e-410f-8807-d74d17c26592]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[worker-us-central1-onUserCreate-bb3fbc18-d11e-410f-8807-d74d17c26592]: BUSY"}}
+[debug] [2024-11-19T18:24:01.558Z] Nov 19, 2024 12:24:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:24:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:24:01.559Z] [runtime-status] [9980] ProcessBackground: lifting resource.name from resource {"name":"projects/actual-backend-app","service":"firebaseauth.googleapis.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] ProcessBackground: lifting resource.name from resource {\"name\":\"projects/actual-backend-app\",\"service\":\"firebaseauth.googleapis.com\"}"}}
+[debug] [2024-11-19T18:24:01.560Z] [runtime-status] [9980] RunBackground {"data":{"uid":"rJwbTgLvqUmv1mi7a3LaCSSRKJFa","email":"otter.olive.931@example.com","emailVerified":true,"displayName":"Otter Olive","metadata":{"creationTime":"2024-11-19T18:24:01.532Z","lastSignInTime":"2024-11-19T18:24:01.532Z"},"customClaims":{},"providerData":[{"providerId":"google.com","rawId":"1153141376503260762050582426787344491142","federatedId":"1153141376503260762050582426787344491142","displayName":"Otter Olive","email":"otter.olive.931@example.com","screenName":"olive_otter"}]},"context":{"eventId":"85a8a0c9-a738-4140-8608-76e18237e25b","eventType":"providers/firebase.auth/eventTypes/user.create","resource":"projects/actual-backend-app","params":{},"timestamp":"2024-11-19T18:24:01.532Z"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [9980] RunBackground {\"data\":{\"uid\":\"rJwbTgLvqUmv1mi7a3LaCSSRKJFa\",\"email\":\"otter.olive.931@example.com\",\"emailVerified\":true,\"displayName\":\"Otter Olive\",\"metadata\":{\"creationTime\":\"2024-11-19T18:24:01.532Z\",\"lastSignInTime\":\"2024-11-19T18:24:01.532Z\"},\"customClaims\":{},\"providerData\":[{\"providerId\":\"google.com\",\"rawId\":\"1153141376503260762050582426787344491142\",\"federatedId\":\"1153141376503260762050582426787344491142\",\"displayName\":\"Otter Olive\",\"email\":\"otter.olive.931@example.com\",\"screenName\":\"olive_otter\"}]},\"context\":{\"eventId\":\"85a8a0c9-a738-4140-8608-76e18237e25b\",\"eventType\":\"providers/firebase.auth/eventTypes/user.create\",\"resource\":\"projects/actual-backend-app\",\"params\":{},\"timestamp\":\"2024-11-19T18:24:01.532Z\"}}"}}
+[info] >  New user created: UID=rJwbTgLvqUmv1mi7a3LaCSSRKJFa, Email=otter.olive.931@example.com {"user":"New user created: UID=rJwbTgLvqUmv1mi7a3LaCSSRKJFa, Email=otter.olive.931@example.com","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"\u001b[90m> \u001b[39m New user created: UID=rJwbTgLvqUmv1mi7a3LaCSSRKJFa, Email=otter.olive.931@example.com"}}
+[debug] [2024-11-19T18:24:01.571Z] Nov 19, 2024 12:24:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:24:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:24:01.577Z] Nov 19, 2024 12:24:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:24:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:24:01.579Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-onUserCreate" in 26.700583ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finished \"us-central1-onUserCreate\" in 26.700583ms"}}
+[debug] [2024-11-19T18:24:01.579Z] [worker-us-central1-onUserCreate-bb3fbc18-d11e-410f-8807-d74d17c26592]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[worker-us-central1-onUserCreate-bb3fbc18-d11e-410f-8807-d74d17c26592]: IDLE"}}
+[debug] [2024-11-19T18:24:01.579Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-11-19T18:24:01.579Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-11-19T18:24:01.579Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-11-19T18:24:01.579Z] Nov 19, 2024 12:24:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:24:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:24:02.898Z] Nov 19, 2024 12:24:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:24:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:24:02.928Z] Nov 19, 2024 12:24:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:24:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:24:02.940Z] Nov 19, 2024 12:24:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:24:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:25:01.606Z] Nov 19, 2024 12:25:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:25:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:25:02.964Z] Nov 19, 2024 12:25:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:25:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:25:03.920Z] Nov 19, 2024 12:25:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:25:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-11-19T18:25:03.930Z] Nov 19, 2024 12:25:03 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 19, 2024 12:25:03 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}

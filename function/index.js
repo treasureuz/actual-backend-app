@@ -14,7 +14,7 @@ admin.initializeApp();
 
 // HTTP function using 2nd Gen syntax
 // exports.helloWorld = functionsV2.https.onRequest((req, res) => {
-//     res.send("Hello from Firebase!");
+//     res.send("Hello from Firebase!")
 // });
 
 // Auth trigger using 1st Gen syntax
