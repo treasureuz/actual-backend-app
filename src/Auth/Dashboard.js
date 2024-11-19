@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 import './Dashboard.css';
 import { auth, db } from './../firebase'; // Adjust the path as needed
 import { signOut } from 'firebase/auth';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, onSnapshot, updateDoc, arrayUnion } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom'; // If using react-router
+import UserPrompts from './UserPrompts'; // Import the UserPrompts component
 
 const Dashboard = () => {
   const [userProfile, setUserProfile] = useState({
@@ -12,6 +13,7 @@ const Dashboard = () => {
     userEmail: '',
   });
   const [quote, setQuote] = useState(null);
+  const [prompts, setPrompts] = useState([]); // State for prompts array
   const [loading, setLoading] = useState(true); // For loading state
   const [error, setError] = useState(null); // For error handling
   const navigate = useNavigate(); // If using react-router
@@ -25,7 +27,7 @@ const Dashboard = () => {
         try {
           const userDocRef = doc(db, 'users', user.uid); // Path to 'users/{userId}'
           const userDoc = await getDoc(userDocRef);
-  
+
           if (userDoc.exists()) {
             setUserProfile(userDoc.data().userProfile);
           } else {
@@ -34,10 +36,11 @@ const Dashboard = () => {
           }
         } catch (error) {
           console.error('Error fetching user profile:', error);
+          setError('Failed to fetch user profile.');
         }
       }
     };
-  
+
     const selectRandomQuote = () => {
       const allQuotes = [
         "The greatest glory in living lies not in never falling, but in rising every time we fall. — Nelson Mandela",
@@ -57,28 +60,47 @@ const Dashboard = () => {
         "It is during our darkest moments that we must focus to see the light. — Aristotle",
         // Add more quotes as desired
       ];
-  
+
       const randomIndex = Math.floor(Math.random() * allQuotes.length);
       setQuote(allQuotes[randomIndex]);
     };
-  
+
     const fetchData = async () => {
       await fetchUserProfile();
       selectRandomQuote();
       setLoading(false);
     };
-  
+
     const unsubscribeAuth = auth.onAuthStateChanged((user) => {
       if (user) {
         fetchData();
+
+        // Set up Firestore listener for prompts
+        const userDocRef = doc(db, 'users', user.uid);
+        const unsubscribePrompts = onSnapshot(userDocRef, (docSnap) => {
+          if (docSnap.exists()) {
+            const data = docSnap.data();
+            setPrompts(data.prompts || []);
+          } else {
+            console.log('No such document for prompts!');
+            setPrompts([]);
+          }
+        }, (error) => {
+          console.error('Error fetching prompts:', error);
+          setError('Failed to fetch prompts.');
+        });
+
+        // Cleanup Firestore listener on unmount or user change
+        return () => {
+          unsubscribePrompts();
+        };
       } else {
         navigate('/login'); // Redirect to login if not authenticated
       }
     });
-  
+
     return () => unsubscribeAuth();
   }, [navigate]);
-  
 
   const handleLogout = async () => {
     try {
@@ -87,6 +109,24 @@ const Dashboard = () => {
     } catch (error) {
       console.error('Error signing out:', error);
       setError('Failed to log out.');
+    }
+  };
+
+  const handleUserPromptSubmit = async (prompt) => {
+    const user = auth.currentUser;
+    if (user) {
+      try {
+        const userDocRef = doc(db, 'users', user.uid);
+        await updateDoc(userDocRef, {
+          prompts: arrayUnion(prompt),
+        });
+        // No need to update state here since onSnapshot will handle it
+      } catch (error) {
+        console.error('Error adding prompt:', error);
+        setError('Failed to add prompt.');
+      }
+    } else {
+      setError('User not authenticated.');
     }
   };
 
@@ -122,6 +162,9 @@ const Dashboard = () => {
         )}
         <span className="user-email">{userProfile.userEmail}</span>
       </div>
+
+      {/* Insert the UserPrompts component here */}
+      <UserPrompts prompts={prompts} onSubmit={handleUserPromptSubmit} />
 
       {quote && (
         <div className="quote-section">
