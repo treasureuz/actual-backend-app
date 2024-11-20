@@ -12,7 +12,7 @@ const UserPrompts = ({ prompts, onSubmit }) => {
       setInput('');
     }
   };
-
+// Cleaned
   return (
     <div className="user-prompts-container">
       <form onSubmit={handleSubmit} className="user-prompts-form">
