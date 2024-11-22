@@ -8,11 +8,11 @@ const UserPrompts = ({ prompts, onSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (input.trim() !== '') {
-      onSubmit(input);
+      onSubmit(input.trim());
       setInput('');
     }
   };
-// Cleaned
+
   return (
     <div className="user-prompts-container">
       <form onSubmit={handleSubmit} className="user-prompts-form">
@@ -27,7 +27,7 @@ const UserPrompts = ({ prompts, onSubmit }) => {
           Submit
         </button>
       </form>
-      
+
       {/* Output Box for Displaying Prompts */}
       <div className="prompts-output">
         <h2>Your Prompts:</h2>

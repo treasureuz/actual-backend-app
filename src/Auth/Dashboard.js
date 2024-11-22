@@ -1,9 +1,10 @@
 // Dashboard.js
 import React, { useEffect, useState } from 'react';
 import './Dashboard.css';
-import { auth, db } from './../firebase'; // Adjust the path as needed
+import { auth, db, functions } from './../firebase'; // Ensure 'functions' is exported from your firebase config
 import { signOut } from 'firebase/auth';
 import { doc, getDoc, onSnapshot, updateDoc, arrayUnion } from 'firebase/firestore';
+import { httpsCallable } from 'firebase/functions';
 import { useNavigate } from 'react-router-dom'; // If using react-router
 import UserPrompts from './UserPrompts'; // Import the UserPrompts component
 
@@ -14,6 +15,7 @@ const Dashboard = () => {
   });
   const [quote, setQuote] = useState(null);
   const [prompts, setPrompts] = useState([]); // State for prompts array
+  const [AIanswers, setAIanswers] = useState([]); // State for AI answers array
   const [loading, setLoading] = useState(true); // For loading state
   const [error, setError] = useState(null); // For error handling
   const navigate = useNavigate(); // If using react-router
@@ -81,13 +83,15 @@ const Dashboard = () => {
           if (docSnap.exists()) {
             const data = docSnap.data();
             setPrompts(data.prompts || []);
+            setAIanswers(data.AIanswers || []);
           } else {
             console.log('No such document for prompts!');
             setPrompts([]);
+            setAIanswers([]);
           }
         }, (error) => {
-          console.error('Error fetching prompts:', error);
-          setError('Failed to fetch prompts.');
+          console.error('Error fetching prompts and AI answers:', error);
+          setError('Failed to fetch prompts and AI answers.');
         });
 
         // Cleanup Firestore listener on unmount or user change
@@ -117,13 +121,28 @@ const Dashboard = () => {
     if (user) {
       try {
         const userDocRef = doc(db, 'users', user.uid);
+        // Add the prompt to 'prompts' array
         await updateDoc(userDocRef, {
           prompts: arrayUnion(prompt),
         });
-        // No need to update state here since onSnapshot will handle it
+
+        // Call the Firebase Cloud Function to generate AI response
+        const generateCompletion = httpsCallable(functions, 'generate_completion');
+        const result = await generateCompletion({ userPrompt: prompt });
+
+        if (result.data && result.data.message) {
+          const aiMessage = result.data.message;
+          // Add the AI response to 'AIanswers' array
+          await updateDoc(userDocRef, {
+            AIanswers: arrayUnion(aiMessage),
+          });
+        } else {
+          console.error('Invalid response from Cloud Function:', result.data);
+          setError('Failed to get a valid response from AI.');
+        }
       } catch (error) {
-        console.error('Error adding prompt:', error);
-        setError('Failed to add prompt.');
+        console.error('Error handling user prompt submission:', error);
+        setError('Failed to submit prompt or retrieve AI response.');
       }
     } else {
       setError('User not authenticated.');
@@ -166,14 +185,30 @@ const Dashboard = () => {
       {/* Insert the UserPrompts component here */}
       <UserPrompts prompts={prompts} onSubmit={handleUserPromptSubmit} />
 
-      {quote && (
+      {/* Display AI Answers */}
+      <div className="ai-answers-section">
+        <h2>AI Responses:</h2>
+        {AIanswers.length > 0 ? (
+          <ul className="ai-answers-list">
+            {AIanswers.map((answer, index) => (
+              <li key={index} className="ai-answer-item">
+                {answer}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="no-ai-answers">No AI responses yet.</p>
+        )}
+      </div>
+
+      {/* {quote && (
         <div className="quote-section">
           <blockquote className="quote">
             "{quote.split(' — ')[0]}"
             <footer className="quote-author">— {quote.split(' — ')[1]}</footer>
           </blockquote>
         </div>
-      )}
+      )} */}
 
       <button className="logout-button" onClick={handleLogout}>
         Logout
