@@ -1,12 +1,15 @@
 // Dashboard.js
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Dashboard.css';
-import { auth, db, functions } from './../firebase'; // Ensure 'functions' is exported from your firebase config
+import { auth, db, functions, storage } from './../firebase'; // Ensure 'storage' is exported from your firebase config
 import { signOut } from 'firebase/auth';
 import { doc, getDoc, onSnapshot, updateDoc, arrayUnion } from 'firebase/firestore';
 import { httpsCallable } from 'firebase/functions';
 import { useNavigate } from 'react-router-dom'; // If using react-router
 import UserPrompts from './UserPrompts'; // Import the UserPrompts component
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpload } from '@fortawesome/free-solid-svg-icons'; // Import the upload icon
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'; // Import storage functions
 
 const Dashboard = () => {
   const [userProfile, setUserProfile] = useState({
@@ -18,7 +21,10 @@ const Dashboard = () => {
   const [AIanswers, setAIanswers] = useState([]); // State for AI answers array
   const [loading, setLoading] = useState(true); // For loading state
   const [error, setError] = useState(null); // For error handling
+  const [uploading, setUploading] = useState(false); // For upload loading state
+  const [uploadError, setUploadError] = useState(null); // For upload error
   const navigate = useNavigate(); // If using react-router
+  const fileInputRef = useRef(null); // Ref for hidden file input
 
   useEffect(() => {
     const fetchUserProfile = async () => {
@@ -149,6 +155,65 @@ const Dashboard = () => {
     }
   };
 
+  // Handler for file input change
+  const handleFileChange = async (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    setUploading(true);
+    setUploadError(null);
+
+    const user = auth.currentUser;
+    if (!user) {
+      setUploadError('User not authenticated.');
+      setUploading(false);
+      return;
+    }
+
+    // Check file size (5 GB = 5 * 1024 * 1024 * 1024 bytes)
+    if (file.size > 2 * 1024 * 1024 * 1024) {
+      setUploadError('File size exceeds 5 GB.');
+      setUploading(false);
+      return;
+    }
+
+    try {
+      // Create a storage reference
+      const storageRef = ref(storage, `profilepicture/${user.uid}/${file.name}`);
+      
+      // Upload the file
+      await uploadBytes(storageRef, file);
+      
+      // Get the download URL
+      const downloadURL = await getDownloadURL(storageRef);
+
+      // Update the user's profile in Firestore
+      const userDocRef = doc(db, 'users', user.uid);
+      await updateDoc(userDocRef, {
+        'userProfile.profileImage': downloadURL,
+      });
+
+      // Update local state
+      setUserProfile((prevProfile) => ({
+        ...prevProfile,
+        profileImage: downloadURL,
+      }));
+
+    } catch (error) {
+      console.error('Error uploading file:', error);
+      setUploadError('Failed to upload image.');
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  // Function to trigger the hidden file input
+  const triggerFileInput = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
+  };
+
   if (loading) {
     return (
       <div className="dashboard-container">
@@ -180,6 +245,25 @@ const Dashboard = () => {
           <div className="profile-placeholder">No Image</div>
         )}
         <span className="user-email">{userProfile.userEmail}</span>
+
+        {/* Upload Button/Icon */}
+        <div className="upload-section">
+          <FontAwesomeIcon 
+            icon={faUpload} 
+            className="upload-icon" 
+            onClick={triggerFileInput} 
+            title="Upload Profile Image" 
+          />
+          <input
+            type="file"
+            accept="image/*"
+            ref={fileInputRef}
+            style={{ display: 'none' }}
+            onChange={handleFileChange}
+          />
+          {uploading && <p className="uploading">Uploading...</p>}
+          {uploadError && <p className="upload-error">{uploadError}</p>}
+        </div>
       </div>
 
       {/* Insert the UserPrompts component here */}
