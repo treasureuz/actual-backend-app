@@ -5,6 +5,7 @@ import HomePage from './unAuth/HomePage';
 import SignPage from './unAuth/SignPage';
 import Dashboard from './Auth/Dashboard';
 import { AuthProvider, useAuth } from './AuthContext';
+import './firebase';
 
 const PrivateRoute = ({ children }) => {
   const { currentUser, loading } = useAuth();
