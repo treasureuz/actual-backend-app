@@ -152,3 +152,101 @@
     padding: 6px 10px;
   }
 }
+
+/* Dashboard.css */
+
+/* AI Answers Section Container */
+.ai-answers-section {
+  margin-top: 0.1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* AI Responses Header */
+.ai-answers-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+/* AI Answers List */
+.ai-answers-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual AI Answer Item */
+.ai-answer-item {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #4caf50; /* Accent color for emphasis */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  color: #555;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for AI Answer Item */
+.ai-answer-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* No AI Answers Message */
+.no-ai-answers {
+  font-style: italic;
+  color: #777;
+  text-align: center;
+}
+
+
+/* Upload Section within Profile */
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px; /* Adjust spacing as needed */
+}
+
+.upload-icon {
+  font-size: 1.5rem;
+  color: #4a90e2;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.upload-icon:hover {
+  color: #357ABD;
+}
+
+.uploading {
+  font-size: 0.9rem;
+  color: #4a90e2;
+  margin-top: 5px;
+}
+
+.upload-error {
+  font-size: 0.9rem;
+  color: red;
+  margin-top: 5px;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 600px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .upload-section {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
