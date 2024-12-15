@@ -1,4 +1,5 @@
-// Dashboard.js
+// src/components/Dashboard.js
+
 import React, { useEffect, useState, useRef } from 'react';
 import './Dashboard.css';
 import { auth, db, functions, storage } from './../firebase'; // Ensure 'storage' is exported from your firebase config
@@ -11,6 +12,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload } from '@fortawesome/free-solid-svg-icons'; // Import the upload icon
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'; // Import storage functions
 
+// STRIPE
+import { loadStripe } from '@stripe/stripe-js';
+
+// Initialize Stripe outside the component to ensure it's loaded only once
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY); // Ensure REACT_APP_STRIPE_PUBLIC_KEY is set in your .env
+
 const Dashboard = () => {
   const [userProfile, setUserProfile] = useState({
     profileImage: '',
@@ -18,13 +25,62 @@ const Dashboard = () => {
   });
   const [quote, setQuote] = useState(null);
   const [prompts, setPrompts] = useState([]); // State for prompts array
-  const [AIanswers, setAIanswers] = useState([]); // State for AI answers array
+  const [AIResponses, setAIResponses] = useState([]); // State for AI responses array
   const [loading, setLoading] = useState(true); // For loading state
   const [error, setError] = useState(null); // For error handling
   const [uploading, setUploading] = useState(false); // For upload loading state
   const [uploadError, setUploadError] = useState(null); // For upload error
   const navigate = useNavigate(); // If using react-router
   const fileInputRef = useRef(null); // Ref for hidden file input
+
+  // Purchase State
+  const [purchaseButtonText, setPurchaseButtonText] = useState("Purchase");
+
+  // Fixed price
+  const purchasePrice = "5.00"; // Fixed price of $5.00
+
+  const initiatePurchase = async () => {
+    setPurchaseButtonText("Processing...");
+    try {
+      const functionsInstance = functions;
+      const createSession = httpsCallable(functionsInstance, 'startPaymentSession'); // Renamed cloud function
+
+      // Retrieve gclid from localStorage if needed
+      const gclid = localStorage.getItem('gclid') || '';
+
+      // Prepare payload
+      const payload = {
+        plan: 'Messagly', // Fixed plan name
+        gclid: gclid,
+      };
+
+      // Call the Firebase function with the prepared payload
+      const response = await createSession(payload);
+      
+      const { sessionId } = response.data;
+      const stripe = await stripePromise;
+
+      // Redirect to Stripe Checkout
+      const { error } = await stripe.redirectToCheckout({ sessionId });
+
+      if (error) {
+        // Handle Stripe redirection errors
+        setPurchaseButtonText("Retry");
+      } else {
+        // Reset button text if redirection is successful
+        setPurchaseButtonText("Purchase");
+      }
+    } catch (err) {
+      // Handle errors from the backend function
+      console.error('Purchase Error:', err);
+      setPurchaseButtonText("Retry");
+    }
+  };
+
+  const handlePurchaseClick = () => {
+    initiatePurchase();
+  };
+
 
   useEffect(() => {
     const fetchUserProfile = async () => {
@@ -42,8 +98,8 @@ const Dashboard = () => {
             console.log('No such document!');
             setError('User profile not found.');
           }
-        } catch (error) {
-          console.error('Error fetching user profile:', error);
+        } catch (err) {
+          console.error('Error fetching user profile:', err);
           setError('Failed to fetch user profile.');
         }
       }
@@ -54,18 +110,6 @@ const Dashboard = () => {
         "The greatest glory in living lies not in never falling, but in rising every time we fall. — Nelson Mandela",
         "The way to get started is to quit talking and begin doing. — Walt Disney",
         "Your time is limited, so don't waste it living someone else's life. — Steve Jobs",
-        "If life were predictable it would cease to be life, and be without flavor. — Eleanor Roosevelt",
-        "If you look at what you have in life, you'll always have more. — Oprah Winfrey",
-        "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. — James Cameron",
-        "Life is what happens when you're busy making other plans. — John Lennon",
-        "Spread love everywhere you go. Let no one ever come to you without leaving happier. — Mother Teresa",
-        "When you reach the end of your rope, tie a knot in it and hang on. — Franklin D. Roosevelt",
-        "Always remember that you are absolutely unique. Just like everyone else. — Margaret Mead",
-        "Don't judge each day by the harvest you reap but by the seeds that you plant. — Robert Louis Stevenson",
-        "The future belongs to those who believe in the beauty of their dreams. — Eleanor Roosevelt",
-        "Tell me and I forget. Teach me and I remember. Involve me and I learn. — Benjamin Franklin",
-        "The best and most beautiful things in the world cannot be seen or even touched — they must be felt with the heart. — Helen Keller",
-        "It is during our darkest moments that we must focus to see the light. — Aristotle",
         // Add more quotes as desired
       ];
 
@@ -89,15 +133,15 @@ const Dashboard = () => {
           if (docSnap.exists()) {
             const data = docSnap.data();
             setPrompts(data.prompts || []);
-            setAIanswers(data.AIanswers || []);
+            setAIResponses(data.AIResponses || []);
           } else {
             console.log('No such document for prompts!');
             setPrompts([]);
-            setAIanswers([]);
+            setAIResponses([]);
           }
-        }, (error) => {
-          console.error('Error fetching prompts and AI answers:', error);
-          setError('Failed to fetch prompts and AI answers.');
+        }, (err) => {
+          console.error('Error fetching prompts and AI responses:', err);
+          setError('Failed to fetch prompts and AI responses.');
         });
 
         // Cleanup Firestore listener on unmount or user change
@@ -116,8 +160,8 @@ const Dashboard = () => {
     try {
       await signOut(auth);
       navigate('/login'); // Redirect to login after logout
-    } catch (error) {
-      console.error('Error signing out:', error);
+    } catch (err) {
+      console.error('Error signing out:', err);
       setError('Failed to log out.');
     }
   };
@@ -133,21 +177,21 @@ const Dashboard = () => {
         });
 
         // Call the Firebase Cloud Function to generate AI response
-        const generateCompletion = httpsCallable(functions, 'generate_completion');
-        const result = await generateCompletion({ userPrompt: prompt });
+        const generateAI = httpsCallable(functions, 'generateAIReply'); // Renamed cloud function
+        const result = await generateAI({ userPrompt: prompt });
 
-        if (result.data && result.data.message) {
-          const aiMessage = result.data.message;
-          // Add the AI response to 'AIanswers' array
+        if (result.data && result.data.reply) {
+          const aiReply = result.data.reply;
+          // Add the AI response to 'AIResponses' array
           await updateDoc(userDocRef, {
-            AIanswers: arrayUnion(aiMessage),
+            AIResponses: arrayUnion(aiReply),
           });
         } else {
           console.error('Invalid response from Cloud Function:', result.data);
           setError('Failed to get a valid response from AI.');
         }
-      } catch (error) {
-        console.error('Error handling user prompt submission:', error);
+      } catch (err) {
+        console.error('Error handling user prompt submission:', err);
         setError('Failed to submit prompt or retrieve AI response.');
       }
     } else {
@@ -170,22 +214,22 @@ const Dashboard = () => {
       return;
     }
 
-    // Check file size (5 GB = 5 * 1024 * 1024 * 1024 bytes)
+    // Check file size (e.g., 2 GB limit)
     if (file.size > 2 * 1024 * 1024 * 1024) {
-      setUploadError('File size exceeds 5 GB.');
+      setUploadError('File size exceeds 2 GB.');
       setUploading(false);
       return;
     }
 
     try {
       // Create a storage reference
-      const storageRef = ref(storage, `profilepicture/${user.uid}/${file.name}`);
+      const storageRefInstance = ref(storage, `profile_pictures/${user.uid}/${file.name}`);
       
       // Upload the file
-      await uploadBytes(storageRef, file);
+      await uploadBytes(storageRefInstance, file);
       
       // Get the download URL
-      const downloadURL = await getDownloadURL(storageRef);
+      const downloadURL = await getDownloadURL(storageRefInstance);
 
       // Update the user's profile in Firestore
       const userDocRef = doc(db, 'users', user.uid);
@@ -199,8 +243,8 @@ const Dashboard = () => {
         profileImage: downloadURL,
       }));
 
-    } catch (error) {
-      console.error('Error uploading file:', error);
+    } catch (err) {
+      console.error('Error uploading file:', err);
       setUploadError('Failed to upload image.');
     } finally {
       setUploading(false);
@@ -232,7 +276,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <h1 className="dashboard-header">Welcome to the Dashboard!</h1>
+      <h1 className="dashboard-header">Welcome to Messagly Dashboard!</h1>
       
       <div className="profile-section">
         {userProfile.profileImage ? (
@@ -266,33 +310,34 @@ const Dashboard = () => {
         </div>
       </div>
 
+      {/* Purchase Section */}
+      <div className="purchase-section">
+        <h2>Purchase Messagly Credits</h2>
+        <p>Get Messagly credits for your account.</p>
+        <button className="purchase-button" onClick={handlePurchaseClick}>
+          {purchaseButtonText}
+        </button>
+        <p className="purchase-price">${purchasePrice} USD</p>
+      </div>
+
       {/* Insert the UserPrompts component here */}
       <UserPrompts prompts={prompts} onSubmit={handleUserPromptSubmit} />
 
-      {/* Display AI Answers */}
-      <div className="ai-answers-section">
+      {/* Display AI Responses */}
+      <div className="ai-responses-section">
         <h2>AI Responses:</h2>
-        {AIanswers.length > 0 ? (
-          <ul className="ai-answers-list">
-            {AIanswers.map((answer, index) => (
-              <li key={index} className="ai-answer-item">
-                {answer}
+        {AIResponses.length > 0 ? (
+          <ul className="ai-responses-list">
+            {AIResponses.map((response, index) => (
+              <li key={index} className="ai-response-item">
+                {response}
               </li>
             ))}
           </ul>
         ) : (
-          <p className="no-ai-answers">No AI responses yet.</p>
+          <p className="no-ai-responses">No AI responses yet.</p>
         )}
       </div>
-
-      {/* {quote && (
-        <div className="quote-section">
-          <blockquote className="quote">
-            "{quote.split(' — ')[0]}"
-            <footer className="quote-author">— {quote.split(' — ')[1]}</footer>
-          </blockquote>
-        </div>
-      )} */}
 
       <button className="logout-button" onClick={handleLogout}>
         Logout
