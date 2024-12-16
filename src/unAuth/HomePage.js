@@ -19,6 +19,15 @@ const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeNav, setActiveNav] = useState('home');
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const gclid = params.get('gclid') || '';
+    console.log('GCLID:', gclid); // Log the GCLID value
+    localStorage.setItem('gclid', gclid);
+  }, []);
+  
+
+
   const slides = [
     {
       icon: ['fab', 'react'],
