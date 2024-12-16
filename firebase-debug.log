@@ -1,0 +1,652 @@
+[debug] [2024-12-16T20:46:38.117Z] ----------------------------------------------------------------------
+[debug] [2024-12-16T20:46:38.119Z] Command:       /opt/homebrew/Cellar/node/22.8.0/bin/node /Users/coffeefuel/.npm-global/bin/firebase emulators:start
+[debug] [2024-12-16T20:46:38.119Z] CLI Version:   13.27.0
+[debug] [2024-12-16T20:46:38.120Z] Platform:      darwin
+[debug] [2024-12-16T20:46:38.120Z] Node Version:  v22.8.0
+[debug] [2024-12-16T20:46:38.120Z] Time:          Mon Dec 16 2024 14:46:38 GMT-0600 (Central Standard Time)
+[debug] [2024-12-16T20:46:38.120Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-16T20:46:38.186Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-16T20:46:38.186Z] > authorizing via signed-in user (contact@webcafeai.com)
+[debug] [2024-12-16T20:46:38.515Z] openjdk version "11.0.24" 2024-07-16
+[debug] [2024-12-16T20:46:38.516Z] 
+OpenJDK Runtime Environment Homebrew (build 11.0.24+0)
+OpenJDK 64-Bit Server VM Homebrew (build 11.0.24+0, mixed mode)
+
+[debug] [2024-12-16T20:46:38.519Z] Parsed Java major version: 11
+[info] i  emulators: Starting emulators: auth, functions, firestore, hosting, pubsub, storage, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting, pubsub, storage, extensions"}}
+[debug] [2024-12-16T20:46:38.520Z] Checked if tokens are valid: false, expires at: 1734381520502
+[debug] [2024-12-16T20:46:38.520Z] Checked if tokens are valid: false, expires at: 1734381520502
+[debug] [2024-12-16T20:46:38.521Z] > refreshing access token with scopes: []
+[debug] [2024-12-16T20:46:38.522Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-12-16T20:46:38.522Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-16T20:46:38.671Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-12-16T20:46:38.671Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-16T20:46:38.691Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app [none]
+[debug] [2024-12-16T20:46:38.928Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app 200
+[debug] [2024-12-16T20:46:38.928Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app {"projectNumber":"1091396686972","projectId":"actual-backend-app","lifecycleState":"ACTIVE","name":"actual-backend-app","labels":{"firebase":"enabled"},"createTime":"2024-10-21T16:06:18.512733Z","parent":{"type":"organization","id":"203099150664"}}
+[debug] [2024-12-16T20:46:40.255Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-16T20:46:40.255Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-16T20:46:40.255Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-16T20:46:40.255Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-16T20:46:40.255Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-16T20:46:40.255Z] [pubsub] Pub/Sub Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-16T20:46:40.255Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-16T20:46:40.255Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-12-16T20:46:40.257Z] [hub] writing locator at /var/folders/_l/v3h37b_s1_zbktxm1w8m6rbm0000gq/T/hub-actual-backend-app.json
+[debug] [2024-12-16T20:46:40.261Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2024-12-16T20:46:40.664Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-16T20:46:40.664Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-16T20:46:40.664Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-16T20:46:40.664Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, database, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, database, dataconnect\u001b[22m"}}
+[debug] [2024-12-16T20:46:40.665Z] defaultcredentials: writing to file /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json
+[debug] [2024-12-16T20:46:40.667Z] Setting GAC to /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json"}}
+[debug] [2024-12-16T20:46:40.667Z] Checked if tokens are valid: true, expires at: 1734385597671
+[debug] [2024-12-16T20:46:40.667Z] Checked if tokens are valid: true, expires at: 1734385597671
+[debug] [2024-12-16T20:46:40.667Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app/adminSdkConfig [none]
+[debug] [2024-12-16T20:46:41.220Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app/adminSdkConfig 200
+[debug] [2024-12-16T20:46:41.220Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app/adminSdkConfig {"projectId":"actual-backend-app","storageBucket":"actual-backend-app.appspot.com","locationId":"us-central"}
+[debug] [2024-12-16T20:46:41.249Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-12-16T20:46:41.249Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2024-12-16T20:46:41.250Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/coffeefuel/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","actual-backend-app","--rules","/Users/coffeefuel/actual-backend-app/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/coffeefuel/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"actual-backend-app\",\"--rules\",\"/Users/coffeefuel/actual-backend-app/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2024-12-16T20:46:41.976Z] Dec 16, 2024 2:46:41 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:46:41 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2024-12-16T20:46:41.987Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2024-12-16T20:46:41.987Z] 127.0.0.1:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2024-12-16T20:46:43.982Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-12-16T20:46:43.982Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-12-16T20:46:43.982Z] Starting Pub/Sub Emulator with command {"binary":"/Users/coffeefuel/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=127.0.0.1","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true,"shell":true,"port":8085} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"/Users/coffeefuel/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/bin/cloud-pubsub-emulator\",\"args\":[\"--host=127.0.0.1\",\"--port=8085\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true,\"shell\":true,\"port\":8085}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2024-12-16T20:46:44.108Z] This is the Google Pub/Sub fake.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"This is the Google Pub/Sub fake.\n"}}
+[debug] [2024-12-16T20:46:44.108Z] Implementation may be incomplete or differ from the real system.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Implementation may be incomplete or differ from the real system.\n"}}
+[debug] [2024-12-16T20:46:44.129Z] Dec 16, 2024 2:46:44 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Dec 16, 2024 2:46:44 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported\n"}}
+[debug] [2024-12-16T20:46:44.193Z] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"SLF4J: Failed to load class \"org.slf4j.impl.StaticLoggerBinder\".\n"}}
+[debug] [2024-12-16T20:46:44.193Z] SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"SLF4J: Defaulting to no-operation (NOP) logger implementation\nSLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.\n"}}
+[debug] [2024-12-16T20:46:44.368Z] Dec 16, 2024 2:46:44 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 8085
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Dec 16, 2024 2:46:44 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: Server started, listening on 8085\n"}}
+[debug] [2024-12-16T20:46:44.386Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-12-16T20:46:44.819Z] Temp file directory for storage emulator: /var/folders/_l/v3h37b_s1_zbktxm1w8m6rbm0000gq/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/_l/v3h37b_s1_zbktxm1w8m6rbm0000gq/T/firebase/storage/blobs"}}
+[debug] [2024-12-16T20:46:44.823Z] Checked if tokens are valid: true, expires at: 1734385597671
+[debug] [2024-12-16T20:46:44.823Z] Checked if tokens are valid: true, expires at: 1734385597671
+[debug] [2024-12-16T20:46:44.823Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/actual-backend-app/sites 
+[debug] [2024-12-16T20:46:45.171Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/actual-backend-app/sites 200
+[debug] [2024-12-16T20:46:45.171Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/actual-backend-app/sites {"sites":[{"name":"projects/actual-backend-app/sites/actual-backend-app","defaultUrl":"https://actual-backend-app.web.app","appId":"1:1091396686972:web:273ef9c5ca3e67ca3ba5f9","type":"DEFAULT_SITE"}]}
+[debug] [2024-12-16T20:46:45.171Z] Checked if tokens are valid: true, expires at: 1734385597671
+[debug] [2024-12-16T20:46:45.171Z] Checked if tokens are valid: true, expires at: 1734385597671
+[debug] [2024-12-16T20:46:45.172Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app/webApps/1:1091396686972:web:273ef9c5ca3e67ca3ba5f9/config [none]
+[debug] [2024-12-16T20:46:45.504Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app/webApps/1:1091396686972:web:273ef9c5ca3e67ca3ba5f9/config 200
+[debug] [2024-12-16T20:46:45.505Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app/webApps/1:1091396686972:web:273ef9c5ca3e67ca3ba5f9/config {"projectId":"actual-backend-app","appId":"1:1091396686972:web:273ef9c5ca3e67ca3ba5f9","storageBucket":"actual-backend-app.appspot.com","locationId":"us-central","apiKey":"AIzaSyDmd9kwPulbRBhJzHmx_nANeHrMbgIFesM","authDomain":"actual-backend-app.firebaseapp.com","messagingSenderId":"1091396686972","measurementId":"G-WBWSGRXFX8"}
+[debug] [2024-12-16T20:46:45.513Z] Checked if tokens are valid: true, expires at: 1734385597671
+[debug] [2024-12-16T20:46:45.513Z] Checked if tokens are valid: true, expires at: 1734385597671
+[debug] [2024-12-16T20:46:45.514Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app [none]
+[debug] [2024-12-16T20:46:45.631Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app 200
+[debug] [2024-12-16T20:46:45.631Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app {"projectId":"actual-backend-app","projectNumber":"1091396686972","displayName":"actual-backend-app","name":"projects/actual-backend-app","resources":{"hostingSite":"actual-backend-app","storageBucket":"actual-backend-app.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_3f8ef017-5d01-4e2b-a342-ab63443da899"}
+[info] i  hosting[actual-backend-app]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting[actual-backend-app]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2024-12-16T20:46:45.745Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "/Users/coffeefuel/actual-backend-app/function" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/coffeefuel/actual-backend-app/function\" for Cloud Functions..."}}
+[debug] [2024-12-16T20:46:45.748Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-12-16T20:46:46.672Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^5.1.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-12-16T20:46:46.673Z] Building nodejs source
+[debug] [2024-12-16T20:46:46.673Z] Failed to find version of module node: reached end of search path /Users/coffeefuel/actual-backend-app/function/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-12-16T20:46:46.674Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-12-16T20:46:46.678Z] Found firebase-functions binary at '/Users/coffeefuel/actual-backend-app/function/node_modules/.bin/firebase-functions'
+[info] Serving at port 8005
+
+[debug] [2024-12-16T20:46:47.088Z] Got response from /__/functions.yaml {"endpoints":{"onUserCreate":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","eventFilters":{"resource":"projects/actual-backend-app"},"retry":false},"labels":{},"entryPoint":"onUserCreate"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2024-12-16T20:46:52.102Z] defaultcredentials: writing to file /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json
+[debug] [2024-12-16T20:46:52.103Z] Setting GAC to /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: onUserCreate. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: onUserCreate."}}
+[debug] [2024-12-16T20:46:52.106Z] addAuthTrigger {"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","resource":"projects/actual-backend-app"}}
+[info] ✔  functions[us-central1-onUserCreate]: auth function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mauth\u001b[22m function initialized."}}
+[info] i  functions: Watching "/Users/coffeefuel/actual-backend-app/python_functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/coffeefuel/actual-backend-app/python_functions\" for Cloud Functions..."}}
+[debug] [2024-12-16T20:46:52.108Z] Customer code is not Node
+[debug] [2024-12-16T20:46:52.110Z] Validating python source
+[debug] [2024-12-16T20:46:52.110Z] Building python source
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-16T20:46:52.114Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-12-16T20:46:52.115Z] Running command with virtualenv: command=., args=["\"/Users/coffeefuel/actual-backend-app/python_functions/venv/bin/activate\"","&&","python3.12","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-12-16T20:46:52.157Z] stdout: /Users/coffeefuel/actual-backend-app/python_functions/venv/lib/python3.12/site-packages/firebase_functions
+
+[debug] [2024-12-16T20:46:52.160Z] Running admin server with args: ["python3.12","\"/Users/coffeefuel/actual-backend-app/python_functions/venv/lib/python3.12/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"actual-backend-app","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"actual-backend-app","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","FIREBASE_AUTH_EMULATOR_HOST":"127.0.0.1:9099","FIRESTORE_EMULATOR_HOST":"127.0.0.1:8080","FIREBASE_FIRESTORE_EMULATOR_ADDRESS":"127.0.0.1:8080","PUBSUB_EMULATOR_HOST":"127.0.0.1:8085","FIREBASE_STORAGE_EMULATOR_HOST":"127.0.0.1:9199","STORAGE_EMULATOR_HOST":"http://127.0.0.1:9199","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","CLOUD_TASKS_EMULATOR_HOST":"127.0.0.1:9499","FIREBASE_CONFIG":"{\"storageBucket\":\"actual-backend-app.appspot.com\",\"projectId\":\"actual-backend-app\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/coffeefuel/actual-backend-app/python_functions
+[debug] [2024-12-16T20:46:52.160Z] Running command with virtualenv: command=., args=["\"/Users/coffeefuel/actual-backend-app/python_functions/venv/bin/activate\"","&&","python3.12","\"/Users/coffeefuel/actual-backend-app/python_functions/venv/lib/python3.12/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[debug] [2024-12-16T20:46:52.718Z] File /Users/coffeefuel/actual-backend-app/python_functions/__pycache__/main.cpython-312.pyc changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/coffeefuel/actual-backend-app/python_functions/__pycache__/main.cpython-312.pyc changed, reloading triggers"}}
+[error] 127.0.0.1 - - [16/Dec/2024 20:46:53] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-12-16T20:46:53.644Z] Got response from /__/functions.yaml endpoints:
+  generate_completion:
+    availableMemoryMb: null
+    callableTrigger: {}
+    concurrency: null
+    entryPoint: generate_completion
+    ingressSettings: null
+    labels:
+      deployment-callable: 'true'
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  handle_stripe_webhook:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: handle_stripe_webhook
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  startPaymentSession:
+    availableMemoryMb: null
+    callableTrigger: {}
+    concurrency: null
+    entryPoint: startPaymentSession
+    ingressSettings: null
+    labels:
+      deployment-callable: 'true'
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [16/Dec/2024 20:46:53] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 14178 Terminated: 15          python3.12 "/Users/coffeefuel/actual-backend-app/python_functions/venv/lib/python3.12/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: generate_completion, handle_stripe_webhook, startPaymentSession. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generate_completion, handle_stripe_webhook, startPaymentSession."}}
+[info] ✔  functions[us-central1-generate_completion]: http function initialized (http://127.0.0.1:5001/actual-backend-app/us-central1/generate_completion). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/actual-backend-app/us-central1/generate_completion)."}}
+[info] ✔  functions[us-central1-handle_stripe_webhook]: http function initialized (http://127.0.0.1:5001/actual-backend-app/us-central1/handle_stripe_webhook). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/actual-backend-app/us-central1/handle_stripe_webhook)."}}
+[info] ✔  functions[us-central1-startPaymentSession]: http function initialized (http://127.0.0.1:5001/actual-backend-app/us-central1/startPaymentSession). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/actual-backend-app/us-central1/startPaymentSession)."}}
+[debug] [2024-12-16T20:46:53.655Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth       │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:5000 │ n/a                              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Pub/Sub        │ 127.0.0.1:8085 │ n/a                              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Storage        │ 127.0.0.1:9199 │ http://127.0.0.1:4000/storage    │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions     │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-12-16T20:46:53.719Z] Customer code is not Node
+[debug] [2024-12-16T20:46:53.719Z] Validating python source
+[debug] [2024-12-16T20:46:53.719Z] Building python source
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-16T20:46:53.720Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-12-16T20:46:53.720Z] Running command with virtualenv: command=., args=["\"/Users/coffeefuel/actual-backend-app/python_functions/venv/bin/activate\"","&&","python3.12","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-12-16T20:46:53.752Z] stdout: /Users/coffeefuel/actual-backend-app/python_functions/venv/lib/python3.12/site-packages/firebase_functions
+
+[debug] [2024-12-16T20:46:53.755Z] Running admin server with args: ["python3.12","\"/Users/coffeefuel/actual-backend-app/python_functions/venv/lib/python3.12/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"actual-backend-app","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"actual-backend-app","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","FIREBASE_AUTH_EMULATOR_HOST":"127.0.0.1:9099","FIRESTORE_EMULATOR_HOST":"127.0.0.1:8080","FIREBASE_FIRESTORE_EMULATOR_ADDRESS":"127.0.0.1:8080","PUBSUB_EMULATOR_HOST":"127.0.0.1:8085","FIREBASE_STORAGE_EMULATOR_HOST":"127.0.0.1:9199","STORAGE_EMULATOR_HOST":"http://127.0.0.1:9199","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","CLOUD_TASKS_EMULATOR_HOST":"127.0.0.1:9499","FIREBASE_CONFIG":"{\"storageBucket\":\"actual-backend-app.appspot.com\",\"projectId\":\"actual-backend-app\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/coffeefuel/.config/firebase/contact_webcafeai_com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/coffeefuel/actual-backend-app/python_functions
+[debug] [2024-12-16T20:46:53.755Z] Running command with virtualenv: command=., args=["\"/Users/coffeefuel/actual-backend-app/python_functions/venv/bin/activate\"","&&","python3.12","\"/Users/coffeefuel/actual-backend-app/python_functions/venv/lib/python3.12/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [16/Dec/2024 20:46:54] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-12-16T20:46:54.648Z] Got response from /__/functions.yaml endpoints:
+  generate_completion:
+    availableMemoryMb: null
+    callableTrigger: {}
+    concurrency: null
+    entryPoint: generate_completion
+    ingressSettings: null
+    labels:
+      deployment-callable: 'true'
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  handle_stripe_webhook:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: handle_stripe_webhook
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  startPaymentSession:
+    availableMemoryMb: null
+    callableTrigger: {}
+    concurrency: null
+    entryPoint: startPaymentSession
+    ingressSettings: null
+    labels:
+      deployment-callable: 'true'
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [16/Dec/2024 20:46:54] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 14182 Terminated: 15          python3.12 "/Users/coffeefuel/actual-backend-app/python_functions/venv/lib/python3.12/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: generate_completion, handle_stripe_webhook, startPaymentSession. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generate_completion, handle_stripe_webhook, startPaymentSession."}}
+[debug] [2024-12-16T20:50:45.866Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast [none]
+[debug] [2024-12-16T20:50:45.866Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast {"eventId":"60c7fdf7-51d3-48c5-988e-4167565ee8be","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/actual-backend-app","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-12-16T20:50:45.865Z","data":{"uid":"xumuLN75tMIb6jPDBOzoDFTqnhch","email":"algae.algae.792@example.com","emailVerified":true,"displayName":"Algae Algae","metadata":{"creationTime":"2024-12-16T20:50:45.864Z","lastSignInTime":"2024-12-16T20:50:45.864Z"},"customClaims":{},"providerData":[{"providerId":"google.com","rawId":"7916567728718211171733606601319372400978","federatedId":"7916567728718211171733606601319372400978","displayName":"Algae Algae","email":"algae.algae.792@example.com","screenName":"algae_algae"}]}}
+[debug] [2024-12-16T20:50:45.877Z] [work-queue] {"queuedWork":["us-central1-onUserCreate-0-2024-12-16T20:50:45.877Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:50:45.878Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["us-central1-onUserCreate-0-2024-12-16T20:50:45.877Z"],"workRunningCount":1}
+[debug] [2024-12-16T20:50:45.878Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:50:45.883Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast 200
+[debug] [2024-12-16T20:50:45.883Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/actual-backend-app/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-12-16T20:50:45.886Z] [work-queue] {"queuedWork":["/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0-2024-12-16T20:50:45.886Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:50:45.886Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0-2024-12-16T20:50:45.886Z"],"workRunningCount":1}
+[debug] [2024-12-16T20:50:45.887Z] Accepted request POST /functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0 --> us-central1-onUserCreate-0
+[debug] [2024-12-16T20:50:45.890Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-12-16T20:50:45.891Z] [functions] Got req.url=/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0, mapping to path=/functions/projects/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/actual-backend-app/triggers/us-central1-onUserCreate-0, mapping to path=/functions/projects/"}}
+[debug] [2024-12-16T20:50:45.892Z] [worker-pool] addWorker(us-central1-onUserCreate) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-onUserCreate)"}}
+[debug] [2024-12-16T20:50:45.893Z] [worker-pool] Adding worker with key us-central1-onUserCreate, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-onUserCreate, total=1"}}
+[debug] [2024-12-16T20:50:45.900Z] Dec 16, 2024 2:50:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:50:46.318Z] Dec 16, 2024 2:50:46 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:46 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[info] >  (node:14198) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:14198) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:14198) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2024-12-16T20:50:46.754Z] [runtime-status] [14198] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-12-16T20:50:46.756Z] [runtime-status] [14198] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.1.1\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-12-16T20:50:46.756Z] [runtime-status] [14198] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-12-16T20:50:46.756Z] [runtime-status] [14198] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.1.1\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-12-16T20:50:46.892Z] [runtime-status] [14198] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-12-16T20:50:46.892Z] [runtime-status] [14198] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"5.1.1\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-12-16T20:50:46.893Z] [runtime-status] [14198] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.1.1\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-12-16T20:50:46.893Z] [runtime-status] [14198] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-12-16T20:50:46.895Z] [runtime-status] [14198] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.1.1\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-12-16T20:50:46.895Z] [runtime-status] [14198] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/coffeefuel/actual-backend-app/function/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-12-16T20:50:46.896Z] [runtime-status] [14198] initializeApp(DEFAULT) {"storageBucket":"actual-backend-app.appspot.com","projectId":"actual-backend-app"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] initializeApp(DEFAULT) {\"storageBucket\":\"actual-backend-app.appspot.com\",\"projectId\":\"actual-backend-app\"}"}}
+[debug] [2024-12-16T20:50:46.898Z] [runtime-status] [14198] Functions runtime initialized. {"cwd":"/Users/coffeefuel/actual-backend-app/function","node_version":"22.8.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] Functions runtime initialized. {\"cwd\":\"/Users/coffeefuel/actual-backend-app/function\",\"node_version\":\"22.8.0\"}"}}
+[debug] [2024-12-16T20:50:46.899Z] [runtime-status] [14198] Listening to port: /var/folders/_l/v3h37b_s1_zbktxm1w8m6rbm0000gq/T/fire_emu_e1dca6197b110418.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] Listening to port: /var/folders/_l/v3h37b_s1_zbktxm1w8m6rbm0000gq/T/fire_emu_e1dca6197b110418.sock"}}
+[debug] [2024-12-16T20:50:46.909Z] [worker-us-central1-onUserCreate-37af4ac9-b845-452b-9c27-bea5eb986b7d]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[worker-us-central1-onUserCreate-37af4ac9-b845-452b-9c27-bea5eb986b7d]: IDLE"}}
+[debug] [2024-12-16T20:50:46.910Z] [worker-pool] submitRequest(triggerId=us-central1-onUserCreate) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-onUserCreate)"}}
+[info] i  functions: Beginning execution of "us-central1-onUserCreate" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Beginning execution of \"us-central1-onUserCreate\""}}
+[debug] [2024-12-16T20:50:46.910Z] [worker-us-central1-onUserCreate-37af4ac9-b845-452b-9c27-bea5eb986b7d]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[worker-us-central1-onUserCreate-37af4ac9-b845-452b-9c27-bea5eb986b7d]: BUSY"}}
+[debug] [2024-12-16T20:50:46.914Z] [runtime-status] [14198] ProcessBackground: lifting resource.name from resource {"name":"projects/actual-backend-app","service":"firebaseauth.googleapis.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] ProcessBackground: lifting resource.name from resource {\"name\":\"projects/actual-backend-app\",\"service\":\"firebaseauth.googleapis.com\"}"}}
+[debug] [2024-12-16T20:50:46.915Z] [runtime-status] [14198] RunBackground {"data":{"uid":"xumuLN75tMIb6jPDBOzoDFTqnhch","email":"algae.algae.792@example.com","emailVerified":true,"displayName":"Algae Algae","metadata":{"creationTime":"2024-12-16T20:50:45.864Z","lastSignInTime":"2024-12-16T20:50:45.864Z"},"customClaims":{},"providerData":[{"providerId":"google.com","rawId":"7916567728718211171733606601319372400978","federatedId":"7916567728718211171733606601319372400978","displayName":"Algae Algae","email":"algae.algae.792@example.com","screenName":"algae_algae"}]},"context":{"eventId":"60c7fdf7-51d3-48c5-988e-4167565ee8be","eventType":"providers/firebase.auth/eventTypes/user.create","resource":"projects/actual-backend-app","params":{},"timestamp":"2024-12-16T20:50:45.865Z"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[runtime-status] [14198] RunBackground {\"data\":{\"uid\":\"xumuLN75tMIb6jPDBOzoDFTqnhch\",\"email\":\"algae.algae.792@example.com\",\"emailVerified\":true,\"displayName\":\"Algae Algae\",\"metadata\":{\"creationTime\":\"2024-12-16T20:50:45.864Z\",\"lastSignInTime\":\"2024-12-16T20:50:45.864Z\"},\"customClaims\":{},\"providerData\":[{\"providerId\":\"google.com\",\"rawId\":\"7916567728718211171733606601319372400978\",\"federatedId\":\"7916567728718211171733606601319372400978\",\"displayName\":\"Algae Algae\",\"email\":\"algae.algae.792@example.com\",\"screenName\":\"algae_algae\"}]},\"context\":{\"eventId\":\"60c7fdf7-51d3-48c5-988e-4167565ee8be\",\"eventType\":\"providers/firebase.auth/eventTypes/user.create\",\"resource\":\"projects/actual-backend-app\",\"params\":{},\"timestamp\":\"2024-12-16T20:50:45.865Z\"}}"}}
+[info] >  New user created: UID=xumuLN75tMIb6jPDBOzoDFTqnhch, Email=algae.algae.792@example.com {"user":"New user created: UID=xumuLN75tMIb6jPDBOzoDFTqnhch, Email=algae.algae.792@example.com","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"\u001b[90m> \u001b[39m New user created: UID=xumuLN75tMIb6jPDBOzoDFTqnhch, Email=algae.algae.792@example.com"}}
+[debug] [2024-12-16T20:50:47.271Z] Dec 16, 2024 2:50:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:50:47.308Z] Dec 16, 2024 2:50:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:50:47.323Z] Dec 16, 2024 2:50:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:50:47.372Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-onUserCreate" in 462.32125ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finished \"us-central1-onUserCreate\" in 462.32125ms"}}
+[debug] [2024-12-16T20:50:47.372Z] [worker-us-central1-onUserCreate-37af4ac9-b845-452b-9c27-bea5eb986b7d]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"[worker-us-central1-onUserCreate-37af4ac9-b845-452b-9c27-bea5eb986b7d]: IDLE"}}
+[debug] [2024-12-16T20:50:47.372Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-12-16T20:50:47.372Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onUserCreate"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-12-16T20:50:47.372Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:50:47.993Z] Dec 16, 2024 2:50:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:50:48.031Z] Dec 16, 2024 2:50:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:50:56.448Z] Dec 16, 2024 2:50:56 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:56 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-12-16T20:50:56.449Z] Dec 16, 2024 2:50:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:50:56.485Z] Dec 16, 2024 2:50:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:50:56.496Z] Dec 16, 2024 2:50:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:50:56.529Z] Dec 16, 2024 2:50:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:50:56.556Z] Dec 16, 2024 2:50:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:50:57.908Z] Dec 16, 2024 2:50:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:50:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:51:04.912Z] Dec 16, 2024 2:51:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:51:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:51:04.913Z] Dec 16, 2024 2:51:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:51:04 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:51:48.050Z] Dec 16, 2024 2:51:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:51:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:51:57.943Z] Dec 16, 2024 2:51:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:51:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:52:48.081Z] Dec 16, 2024 2:52:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:52:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:52:57.985Z] Dec 16, 2024 2:52:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:52:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:53:48.103Z] Dec 16, 2024 2:53:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:53:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:53:58.013Z] Dec 16, 2024 2:53:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:53:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:54:36.586Z] [work-queue] {"queuedWork":["/actual-backend-app/us-central1/startPaymentSession-2024-12-16T20:54:36.586Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:54:36.586Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/actual-backend-app/us-central1/startPaymentSession-2024-12-16T20:54:36.586Z"],"workRunningCount":1}
+[debug] [2024-12-16T20:54:36.586Z] Accepted request OPTIONS /actual-backend-app/us-central1/startPaymentSession --> us-central1-startPaymentSession
+[debug] [2024-12-16T20:54:36.589Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-12-16T20:54:36.590Z] [functions] Got req.url=/actual-backend-app/us-central1/startPaymentSession, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/actual-backend-app/us-central1/startPaymentSession, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-16T20:54:36.598Z] Running command with virtualenv: command=., args=["\"/Users/coffeefuel/actual-backend-app/python_functions/venv/bin/activate\"","&&","functions-framework"]
+[debug] [2024-12-16T20:54:36.599Z] [worker-pool] addWorker(us-central1-startPaymentSession) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-startPaymentSession)"}}
+[debug] [2024-12-16T20:54:36.600Z] [worker-pool] Adding worker with key us-central1-startPaymentSession, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-startPaymentSession, total=1"}}
+[info] >  WARNING:root:Request has invalid method. GET {"user":"WARNING:root:Request has invalid method. GET","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"\u001b[90m> \u001b[39m WARNING:root:Request has invalid method. GET"}}
+[info] >  ERROR:root:Invalid request, unable to process. {"user":"ERROR:root:Invalid request, unable to process.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"\u001b[90m> \u001b[39m ERROR:root:Invalid request, unable to process."}}
+[debug] [2024-12-16T20:54:37.723Z] [worker-us-central1-startPaymentSession-35191da1-1bc6-4859-8fd2-9a3dc4e60591]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"[worker-us-central1-startPaymentSession-35191da1-1bc6-4859-8fd2-9a3dc4e60591]: IDLE"}}
+[debug] [2024-12-16T20:54:37.723Z] [worker-pool] submitRequest(triggerId=us-central1-startPaymentSession) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-startPaymentSession)"}}
+[info] i  functions: Beginning execution of "us-central1-startPaymentSession" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"Beginning execution of \"us-central1-startPaymentSession\""}}
+[debug] [2024-12-16T20:54:37.723Z] [worker-us-central1-startPaymentSession-35191da1-1bc6-4859-8fd2-9a3dc4e60591]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"[worker-us-central1-startPaymentSession-35191da1-1bc6-4859-8fd2-9a3dc4e60591]: BUSY"}}
+[debug] [2024-12-16T20:54:37.726Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-startPaymentSession" in 3.209167ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"Finished \"us-central1-startPaymentSession\" in 3.209167ms"}}
+[debug] [2024-12-16T20:54:37.726Z] [worker-us-central1-startPaymentSession-35191da1-1bc6-4859-8fd2-9a3dc4e60591]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"[worker-us-central1-startPaymentSession-35191da1-1bc6-4859-8fd2-9a3dc4e60591]: IDLE"}}
+[debug] [2024-12-16T20:54:37.727Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-12-16T20:54:37.727Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-12-16T20:54:37.727Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:54:37.727Z] [work-queue] {"queuedWork":["/actual-backend-app/us-central1/startPaymentSession-2024-12-16T20:54:37.727Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:54:37.727Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/actual-backend-app/us-central1/startPaymentSession-2024-12-16T20:54:37.727Z"],"workRunningCount":1}
+[debug] [2024-12-16T20:54:37.727Z] Accepted request POST /actual-backend-app/us-central1/startPaymentSession --> us-central1-startPaymentSession
+[debug] [2024-12-16T20:54:37.728Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-12-16T20:54:37.728Z] [functions] Got req.url=/actual-backend-app/us-central1/startPaymentSession, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/actual-backend-app/us-central1/startPaymentSession, mapping to path=/"}}
+[debug] [2024-12-16T20:54:37.728Z] [worker-pool] submitRequest(triggerId=us-central1-startPaymentSession) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-startPaymentSession)"}}
+[info] i  functions: Beginning execution of "us-central1-startPaymentSession" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"Beginning execution of \"us-central1-startPaymentSession\""}}
+[debug] [2024-12-16T20:54:37.728Z] [worker-us-central1-startPaymentSession-35191da1-1bc6-4859-8fd2-9a3dc4e60591]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"[worker-us-central1-startPaymentSession-35191da1-1bc6-4859-8fd2-9a3dc4e60591]: BUSY"}}
+[debug] [2024-12-16T20:54:38.275Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-startPaymentSession" in 547.488167ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"Finished \"us-central1-startPaymentSession\" in 547.488167ms"}}
+[debug] [2024-12-16T20:54:38.276Z] [worker-us-central1-startPaymentSession-35191da1-1bc6-4859-8fd2-9a3dc4e60591]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"[worker-us-central1-startPaymentSession-35191da1-1bc6-4859-8fd2-9a3dc4e60591]: IDLE"}}
+[debug] [2024-12-16T20:54:38.276Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-12-16T20:54:38.276Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-startPaymentSession"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-12-16T20:54:38.276Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:54:58.036Z] Dec 16, 2024 2:54:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:54:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:55:07.840Z] Dec 16, 2024 2:55:07 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:07 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-12-16T20:55:07.842Z] Dec 16, 2024 2:55:07 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:07 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-12-16T20:55:07.849Z] Dec 16, 2024 2:55:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:55:07.855Z] Dec 16, 2024 2:55:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:55:07.855Z] Dec 16, 2024 2:55:07 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:07 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2024-12-16T20:55:07.866Z] Dec 16, 2024 2:55:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:55:07.876Z] Dec 16, 2024 2:55:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:55:30.317Z] [work-queue] {"queuedWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.317Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:55:30.317Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.317Z"],"workRunningCount":1}
+[debug] [2024-12-16T20:55:30.317Z] Accepted request POST /actual-backend-app/us-central1/handle_stripe_webhook --> us-central1-handle_stripe_webhook
+[debug] [2024-12-16T20:55:30.319Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-12-16T20:55:30.319Z] [functions] Got req.url=/actual-backend-app/us-central1/handle_stripe_webhook, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/actual-backend-app/us-central1/handle_stripe_webhook, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-16T20:55:30.321Z] Running command with virtualenv: command=., args=["\"/Users/coffeefuel/actual-backend-app/python_functions/venv/bin/activate\"","&&","functions-framework"]
+[debug] [2024-12-16T20:55:30.326Z] [worker-pool] addWorker(us-central1-handle_stripe_webhook) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-handle_stripe_webhook)"}}
+[debug] [2024-12-16T20:55:30.327Z] [worker-pool] Adding worker with key us-central1-handle_stripe_webhook, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-handle_stripe_webhook, total=1"}}
+[debug] [2024-12-16T20:55:30.332Z] [work-queue] {"queuedWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.332Z"],"queueLength":1,"runningWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.317Z"],"workRunningCount":1}
+[debug] [2024-12-16T20:55:30.332Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.317Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.332Z"],"workRunningCount":2}
+[debug] [2024-12-16T20:55:30.332Z] Accepted request POST /actual-backend-app/us-central1/handle_stripe_webhook --> us-central1-handle_stripe_webhook
+[debug] [2024-12-16T20:55:30.334Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-12-16T20:55:30.334Z] [functions] Got req.url=/actual-backend-app/us-central1/handle_stripe_webhook, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/actual-backend-app/us-central1/handle_stripe_webhook, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-16T20:55:30.335Z] Running command with virtualenv: command=., args=["\"/Users/coffeefuel/actual-backend-app/python_functions/venv/bin/activate\"","&&","functions-framework"]
+[debug] [2024-12-16T20:55:30.338Z] [worker-pool] addWorker(us-central1-handle_stripe_webhook) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-handle_stripe_webhook)"}}
+[debug] [2024-12-16T20:55:30.338Z] [worker-pool] Adding worker with key us-central1-handle_stripe_webhook, total=2 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-handle_stripe_webhook, total=2"}}
+[debug] [2024-12-16T20:55:30.343Z] [work-queue] {"queuedWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.343Z"],"queueLength":1,"runningWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.317Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.332Z"],"workRunningCount":2}
+[debug] [2024-12-16T20:55:30.343Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.317Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.332Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.343Z"],"workRunningCount":3}
+[debug] [2024-12-16T20:55:30.343Z] Accepted request POST /actual-backend-app/us-central1/handle_stripe_webhook --> us-central1-handle_stripe_webhook
+[debug] [2024-12-16T20:55:30.346Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-12-16T20:55:30.346Z] [functions] Got req.url=/actual-backend-app/us-central1/handle_stripe_webhook, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/actual-backend-app/us-central1/handle_stripe_webhook, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-16T20:55:30.350Z] Running command with virtualenv: command=., args=["\"/Users/coffeefuel/actual-backend-app/python_functions/venv/bin/activate\"","&&","functions-framework"]
+[debug] [2024-12-16T20:55:30.350Z] [worker-pool] addWorker(us-central1-handle_stripe_webhook) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-handle_stripe_webhook)"}}
+[debug] [2024-12-16T20:55:30.350Z] [worker-pool] Adding worker with key us-central1-handle_stripe_webhook, total=3 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-handle_stripe_webhook, total=3"}}
+[debug] [2024-12-16T20:55:30.364Z] [work-queue] {"queuedWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.364Z"],"queueLength":1,"runningWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.317Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.332Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.343Z"],"workRunningCount":3}
+[debug] [2024-12-16T20:55:30.365Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.317Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.332Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.343Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.364Z"],"workRunningCount":4}
+[debug] [2024-12-16T20:55:30.365Z] Accepted request POST /actual-backend-app/us-central1/handle_stripe_webhook --> us-central1-handle_stripe_webhook
+[debug] [2024-12-16T20:55:30.366Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-12-16T20:55:30.366Z] [functions] Got req.url=/actual-backend-app/us-central1/handle_stripe_webhook, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/actual-backend-app/us-central1/handle_stripe_webhook, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-16T20:55:30.367Z] Running command with virtualenv: command=., args=["\"/Users/coffeefuel/actual-backend-app/python_functions/venv/bin/activate\"","&&","functions-framework"]
+[debug] [2024-12-16T20:55:30.368Z] [worker-pool] addWorker(us-central1-handle_stripe_webhook) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-handle_stripe_webhook)"}}
+[debug] [2024-12-16T20:55:30.368Z] [worker-pool] Adding worker with key us-central1-handle_stripe_webhook, total=4 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-handle_stripe_webhook, total=4"}}
+[debug] [2024-12-16T20:55:31.250Z] [worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: IDLE"}}
+[debug] [2024-12-16T20:55:31.250Z] [worker-pool] submitRequest(triggerId=us-central1-handle_stripe_webhook) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handle_stripe_webhook)"}}
+[info] i  functions: Beginning execution of "us-central1-handle_stripe_webhook" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Beginning execution of \"us-central1-handle_stripe_webhook\""}}
+[debug] [2024-12-16T20:55:31.250Z] [worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: BUSY"}}
+[debug] [2024-12-16T20:55:31.254Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handle_stripe_webhook" in 4.249916ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finished \"us-central1-handle_stripe_webhook\" in 4.249916ms"}}
+[debug] [2024-12-16T20:55:31.254Z] [worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: IDLE"}}
+[debug] [2024-12-16T20:55:31.254Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-12-16T20:55:31.255Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-12-16T20:55:31.255Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.332Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.343Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.364Z"],"workRunningCount":3}
+[debug] [2024-12-16T20:55:31.266Z] [worker-us-central1-handle_stripe_webhook-713cfba7-444a-4d8d-bb85-6ea47bb4f093]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-713cfba7-444a-4d8d-bb85-6ea47bb4f093]: IDLE"}}
+[debug] [2024-12-16T20:55:31.266Z] [worker-pool] submitRequest(triggerId=us-central1-handle_stripe_webhook) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handle_stripe_webhook)"}}
+[info] i  functions: Beginning execution of "us-central1-handle_stripe_webhook" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Beginning execution of \"us-central1-handle_stripe_webhook\""}}
+[debug] [2024-12-16T20:55:31.266Z] [worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: BUSY"}}
+[debug] [2024-12-16T20:55:31.266Z] [worker-us-central1-handle_stripe_webhook-99b99336-e2da-4518-8444-f5ed9ca3838c]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-99b99336-e2da-4518-8444-f5ed9ca3838c]: IDLE"}}
+[debug] [2024-12-16T20:55:31.266Z] [worker-pool] submitRequest(triggerId=us-central1-handle_stripe_webhook) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handle_stripe_webhook)"}}
+[info] i  functions: Beginning execution of "us-central1-handle_stripe_webhook" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Beginning execution of \"us-central1-handle_stripe_webhook\""}}
+[debug] [2024-12-16T20:55:31.266Z] [worker-us-central1-handle_stripe_webhook-713cfba7-444a-4d8d-bb85-6ea47bb4f093]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-713cfba7-444a-4d8d-bb85-6ea47bb4f093]: BUSY"}}
+[debug] [2024-12-16T20:55:31.271Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handle_stripe_webhook" in 4.920084ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finished \"us-central1-handle_stripe_webhook\" in 4.920084ms"}}
+[debug] [2024-12-16T20:55:31.271Z] [worker-us-central1-handle_stripe_webhook-713cfba7-444a-4d8d-bb85-6ea47bb4f093]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-713cfba7-444a-4d8d-bb85-6ea47bb4f093]: IDLE"}}
+[debug] [2024-12-16T20:55:31.271Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-12-16T20:55:31.272Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-12-16T20:55:31.272Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.332Z","/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.364Z"],"workRunningCount":2}
+[debug] [2024-12-16T20:55:31.273Z] Dec 16, 2024 2:55:31 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:31 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:55:31.288Z] [worker-us-central1-handle_stripe_webhook-49b72c84-987b-4c83-a290-2925f68df358]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-49b72c84-987b-4c83-a290-2925f68df358]: IDLE"}}
+[debug] [2024-12-16T20:55:31.288Z] [worker-pool] submitRequest(triggerId=us-central1-handle_stripe_webhook) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handle_stripe_webhook)"}}
+[info] i  functions: Beginning execution of "us-central1-handle_stripe_webhook" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Beginning execution of \"us-central1-handle_stripe_webhook\""}}
+[debug] [2024-12-16T20:55:31.288Z] [worker-us-central1-handle_stripe_webhook-713cfba7-444a-4d8d-bb85-6ea47bb4f093]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-713cfba7-444a-4d8d-bb85-6ea47bb4f093]: BUSY"}}
+[debug] [2024-12-16T20:55:31.290Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handle_stripe_webhook" in 1.523209ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finished \"us-central1-handle_stripe_webhook\" in 1.523209ms"}}
+[debug] [2024-12-16T20:55:31.290Z] [worker-us-central1-handle_stripe_webhook-713cfba7-444a-4d8d-bb85-6ea47bb4f093]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-713cfba7-444a-4d8d-bb85-6ea47bb4f093]: IDLE"}}
+[debug] [2024-12-16T20:55:31.290Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-12-16T20:55:31.290Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-12-16T20:55:31.290Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:30.332Z"],"workRunningCount":1}
+[info] >  User xumuLN75tMIb6jPDBOzoDFTqnhch has been granted 100 credits. {"user":"User xumuLN75tMIb6jPDBOzoDFTqnhch has been granted 100 credits.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m User xumuLN75tMIb6jPDBOzoDFTqnhch has been granted 100 credits."}}
+[debug] [2024-12-16T20:55:31.294Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handle_stripe_webhook" in 28.377917ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finished \"us-central1-handle_stripe_webhook\" in 28.377917ms"}}
+[debug] [2024-12-16T20:55:31.295Z] [worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: IDLE"}}
+[debug] [2024-12-16T20:55:31.295Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-12-16T20:55:31.295Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-12-16T20:55:31.295Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:55:32.197Z] Dec 16, 2024 2:55:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:55:32.221Z] Dec 16, 2024 2:55:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:55:32.442Z] [work-queue] {"queuedWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:32.442Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:55:32.442Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/actual-backend-app/us-central1/handle_stripe_webhook-2024-12-16T20:55:32.442Z"],"workRunningCount":1}
+[debug] [2024-12-16T20:55:32.442Z] Accepted request POST /actual-backend-app/us-central1/handle_stripe_webhook --> us-central1-handle_stripe_webhook
+[debug] [2024-12-16T20:55:32.443Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-12-16T20:55:32.444Z] [functions] Got req.url=/actual-backend-app/us-central1/handle_stripe_webhook, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/actual-backend-app/us-central1/handle_stripe_webhook, mapping to path=/"}}
+[debug] [2024-12-16T20:55:32.444Z] [worker-pool] submitRequest(triggerId=us-central1-handle_stripe_webhook) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handle_stripe_webhook)"}}
+[info] i  functions: Beginning execution of "us-central1-handle_stripe_webhook" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Beginning execution of \"us-central1-handle_stripe_webhook\""}}
+[debug] [2024-12-16T20:55:32.445Z] [worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: BUSY"}}
+[debug] [2024-12-16T20:55:32.449Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handle_stripe_webhook" in 3.873375ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finished \"us-central1-handle_stripe_webhook\" in 3.873375ms"}}
+[debug] [2024-12-16T20:55:32.449Z] [worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"[worker-us-central1-handle_stripe_webhook-d911c341-45ce-41d3-b6a9-bd9b4318901f]: IDLE"}}
+[debug] [2024-12-16T20:55:32.449Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-12-16T20:55:32.449Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handle_stripe_webhook"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-12-16T20:55:32.449Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-16T20:55:36.465Z] Dec 16, 2024 2:55:36 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:36 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-12-16T20:55:36.477Z] Dec 16, 2024 2:55:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:55:36.494Z] Dec 16, 2024 2:55:36 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:36 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-12-16T20:55:36.495Z] Dec 16, 2024 2:55:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:55:36.497Z] Dec 16, 2024 2:55:36 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:36 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2024-12-16T20:55:36.509Z] Dec 16, 2024 2:55:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:55:36.518Z] Dec 16, 2024 2:55:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:55:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:56:32.249Z] Dec 16, 2024 2:56:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:56:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:56:36.535Z] Dec 16, 2024 2:56:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:56:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:57:32.268Z] Dec 16, 2024 2:57:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:57:32 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:57:36.552Z] Dec 16, 2024 2:57:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:57:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:58:18.223Z] Dec 16, 2024 2:58:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:58:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:58:52.191Z] Dec 16, 2024 2:58:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:58:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:59:18.247Z] Dec 16, 2024 2:59:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:59:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T20:59:52.218Z] Dec 16, 2024 2:59:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 2:59:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T21:00:18.264Z] Dec 16, 2024 3:00:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 3:00:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T21:00:52.234Z] Dec 16, 2024 3:00:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 3:00:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T21:01:18.278Z] Dec 16, 2024 3:01:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 3:01:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-16T21:01:52.256Z] Dec 16, 2024 3:01:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 3:01:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
