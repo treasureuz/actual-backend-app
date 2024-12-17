@@ -25,8 +25,8 @@ exports.onUserCreate = functions.auth.user().onCreate(async (user) => {
 
                 // Randomly select between two profile images
         const profileImages = [
-            "https://firebasestorage.googleapis.com/v0/b/actual-backend-app.appspot.com/o/defaultprofile%2Fdogprofile.webp?alt=media&token=97ad1b3c-4178-48e2-9103-85ac7f3b6cb8",
-            "https://firebasestorage.googleapis.com/v0/b/actual-backend-app.appspot.com/o/defaultprofile%2Fcatprofile.webp?alt=media&token=22f3038c-f7aa-47c9-8ae0-5cad577c51ce"
+            "https://firebasestorage.googleapis.com/v0/b/imagelocation",
+            "https://firebasestorage.googleapis.com/v0/b/imagelocation"
         ];
         const randomProfileImage = profileImages[Math.floor(Math.random() * profileImages.length)];
         // Store profileImage and userEmails directly in the user's document in the 'userProfile' field
