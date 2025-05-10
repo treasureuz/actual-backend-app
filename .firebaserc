@@ -1,7 +1,7 @@
 {
   "projects": {
-    "default": "actual-backend-app",
-    "qa": "actual-backend-app"
+    "default": "actual-backend-app-e626b",
+    "qa": "actual-backend-app-e626b"
   },
   "targets": {},
   "etags": {},
