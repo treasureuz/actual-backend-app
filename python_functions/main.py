@@ -31,6 +31,7 @@ client = OpenAI(api_key=openai_api_key)
 
 @https_fn.on_call()
 def generate_completion(req: https_fn.CallableRequest) -> dict:
+    print("Request data:", req.data)
     try:
         if not req.auth:
             return {"error": "Authentication required."}
