@@ -180,8 +180,8 @@ const Dashboard = () => {
         const generateAI = httpsCallable(functions, 'generate_completion'); // Renamed cloud function
         const result = await generateAI({ userPrompt: prompt });
 
-        if (result.data && result.data.reply) {
-          const aiReply = result.data.reply;
+        if (result.data && result.data.message) {
+          const aiReply = result.data.message;
           // Add the AI response to 'AIResponses' array
           await updateDoc(userDocRef, {
             AIResponses: arrayUnion(aiReply),

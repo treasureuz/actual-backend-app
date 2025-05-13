@@ -4,14 +4,14 @@ from firebase_functions import https_fn
 from firebase_admin import initialize_app, firestore
 from openai import OpenAI
 from dotenv import load_dotenv
-import stripe
+# import stripe
 import os
 import requests
 
 # Load environment variables from .env file
 load_dotenv()
 
-stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
+# stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
 
 GA4_MEASUREMENT_ID = os.environ.get("GA4_MEASUREMENT_ID")
 GA4_API_SECRET = os.environ.get("GA4_API_SECRET")
@@ -44,9 +44,9 @@ def generate_completion(req: https_fn.CallableRequest) -> dict:
             return {"error": "userPrompt is required"}
 
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4o",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "developer", "content": "You are a helpful assistant."},
                 {"role": "user", "content": user_prompt}
             ]
         )
@@ -144,35 +144,35 @@ def send_ga4_begin_checkout_event(user_id: str, gclid: str, plan_name: str):
         print(f"Error sending GA4 event: {str(e)}")
 
 
-@https_fn.on_request()
-def handle_stripe_webhook(req: https_fn.Request):
-    endpoint_secret = os.getenv("STRIPE_WEBHOOK_SECRET")
-    if not endpoint_secret:
-        return ("Endpoint secret not set", 500)
+# @https_fn.on_request()
+# def handle_stripe_webhook(req: https_fn.Request):
+#     endpoint_secret = os.getenv("STRIPE_WEBHOOK_SECRET")
+#     if not endpoint_secret:
+#         return ("Endpoint secret not set", 500)
 
-    payload = req.get_data(as_text=True)
-    sig = req.headers.get("Stripe-Signature", None)
+#     payload = req.get_data(as_text=True)
+#     sig = req.headers.get("Stripe-Signature", None)
 
-    try:
-        event = stripe.Webhook.construct_event(
-            payload, sig, endpoint_secret
-        )
-    except ValueError:
-        return ("Invalid payload", 400)
-    except stripe.error.SignatureVerificationError:
-        return ("Invalid signature", 400)
+#     try:
+#         event = stripe.Webhook.construct_event(
+#             payload, sig, endpoint_secret
+#         )
+#     except ValueError:
+#         return ("Invalid payload", 400)
+#     except stripe.error.SignatureVerificationError:
+#         return ("Invalid signature", 400)
 
-    if event["type"] == "checkout.session.completed":
-        session = event["data"]["object"]
-        uid = session.get("metadata", {}).get("uid")
+#     if event["type"] == "checkout.session.completed":
+#         session = event["data"]["object"]
+#         uid = session.get("metadata", {}).get("uid")
 
-        if uid:
-            user_doc_ref = db.collection('users').document(uid)
-            user_doc_ref.update({
-                "credits": firestore.Increment(100)
-            })
-            print(f"User {uid} has been granted 100 credits.")
-        else:
-            print("No UID found in session metadata.")
+#         if uid:
+#             user_doc_ref = db.collection('users').document(uid)
+#             user_doc_ref.update({
+#                 "credits": firestore.Increment(100)
+#             })
+#             print(f"User {uid} has been granted 100 credits.")
+#         else:
+#             print("No UID found in session metadata.")
 
-    return ("", 200)
+#     return ("", 200)
