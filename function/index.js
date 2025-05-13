@@ -2,7 +2,7 @@
 const functions = require("firebase-functions");
 
 // Import 2nd Gen Firebase Functions for HTTP Triggers
-// const functionsV2 = require("firebase-functions/v2");
+const functionsV2 = require("firebase-functions/v2");
 
 // Import Firebase Admin SDK
 const admin = require("firebase-admin");
@@ -13,9 +13,9 @@ admin.initializeApp();
 
 
 // HTTP function using 2nd Gen syntax
-// exports.helloWorld = functionsV2.https.onRequest((req, res) => {
-//     res.send("Hello from Firebase!")
-// });
+exports.helloWorld = functionsV2.https.onRequest((req, res) => {
+     res.send("Hello from Firebase!")
+ });
 
 // Auth trigger using 1st Gen syntax
 exports.onUserCreate = functions.auth.user().onCreate(async (user) => {

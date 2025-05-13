@@ -10,19 +10,6 @@
         "firebase-debug.*.log",
         "*.local"
       ]
-    },
-    {
-      "source": "python_functions",
-      "codebase": "python_functions",
-      "runtime": "python310",
-      "entryPoint": "generate_completion",
-      "ignore": [
-        "venv",
-        ".git",
-        "firebase-debug.log",
-        "firebase-debug.*.log",
-        "*.local"
-      ]
     }
   ],
   "hosting": {

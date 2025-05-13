@@ -4,6 +4,8 @@ from firebase_functions import https_fn
 from firebase_admin import initialize_app, firestore
 from openai import OpenAI
 from dotenv import load_dotenv
+from flask import Flask, request, jsonify
+from functions_framework import create_app
 # import stripe
 import os
 import requests
@@ -143,6 +145,7 @@ def send_ga4_begin_checkout_event(user_id: str, gclid: str, plan_name: str):
     except Exception as e:
         print(f"Error sending GA4 event: {str(e)}")
 
+app = create_app(globals())
 
 # @https_fn.on_request()
 # def handle_stripe_webhook(req: https_fn.Request):
