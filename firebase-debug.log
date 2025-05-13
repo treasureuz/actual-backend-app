@@ -650,3 +650,608 @@ INFO: Detected non-HTTP/2 connection.
 [debug] [2024-12-16T21:01:52.256Z] Dec 16, 2024 3:01:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
  {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 16, 2024 3:01:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-05-13T07:54:04.441Z] ----------------------------------------------------------------------
+[debug] [2025-05-13T07:54:04.445Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-05-13T07:54:04.445Z] CLI Version:   14.3.1
+[debug] [2025-05-13T07:54:04.446Z] Platform:      win32
+[debug] [2025-05-13T07:54:04.446Z] Node Version:  v20.12.2
+[debug] [2025-05-13T07:54:04.446Z] Time:          Tue May 13 2025 03:54:04 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-05-13T07:54:04.446Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-13T07:54:04.449Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-05-13T07:54:04.750Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-13T07:54:04.751Z] > authorizing via signed-in user (uzondut@gmail.com)
+[debug] [2025-05-13T07:54:04.751Z] [iam] checking project actual-backend-app-e626b for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2025-05-13T07:54:04.751Z] Checked if tokens are valid: false, expires at: 1747121225594
+[debug] [2025-05-13T07:54:04.752Z] Checked if tokens are valid: false, expires at: 1747121225594
+[debug] [2025-05-13T07:54:04.752Z] > refreshing access token with scopes: []
+[debug] [2025-05-13T07:54:04.752Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-05-13T07:54:04.753Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-13T07:54:04.880Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-05-13T07:54:04.880Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-13T07:54:04.896Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions [none]
+[debug] [2025-05-13T07:54:04.896Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:04.896Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2025-05-13T07:54:04.953Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-05-13T07:54:04.953Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-05-13T07:54:05.054Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions 200
+[debug] [2025-05-13T07:54:05.054Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2025-05-13T07:54:05.054Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:05.054Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:05.055Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-05-13T07:54:05.055Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-05-13T07:54:05.272Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-05-13T07:54:05.272Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-05-13T07:54:05.272Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:05.272Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:05.273Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b [none]
+[debug] [2025-05-13T07:54:05.616Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b 200
+[debug] [2025-05-13T07:54:05.616Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b {"projectId":"actual-backend-app-e626b","projectNumber":"33842684769","displayName":"actual-backend-app","name":"projects/actual-backend-app-e626b","resources":{"hostingSite":"actual-backend-app-e626b"},"state":"ACTIVE","etag":"1_c03b2c0d-257d-4136-8a58-50bc9052b808"}
+[debug] [2025-05-13T07:54:05.617Z] Specified "public" directory "build" does not exist; Deploy to Hosting site "actual-backend-app-e626b" may fail or be empty.
+[info] 
+[info] === Deploying to 'actual-backend-app-e626b'...
+[info] 
+[info] i  deploying storage, firestore, functions, hosting 
+[info] i  storage: ensuring required API firebasestorage.googleapis.com is enabled... 
+[debug] [2025-05-13T07:54:05.620Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:05.620Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:05.620Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/firebasestorage.googleapis.com [none]
+[debug] [2025-05-13T07:54:05.620Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/firebasestorage.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:06.048Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/firebasestorage.googleapis.com 200
+[debug] [2025-05-13T07:54:06.048Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/firebasestorage.googleapis.com [omitted]
+[info] +  storage: required API firebasestorage.googleapis.com is enabled 
+[debug] [2025-05-13T07:54:06.049Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:06.049Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:06.049Z] >>> [apiv2][query] GET https://firebasestorage.googleapis.com/v1alpha/projects/actual-backend-app-e626b/defaultBucket [none]
+[debug] [2025-05-13T07:54:06.451Z] <<< [apiv2][status] GET https://firebasestorage.googleapis.com/v1alpha/projects/actual-backend-app-e626b/defaultBucket 200
+[debug] [2025-05-13T07:54:06.451Z] <<< [apiv2][body] GET https://firebasestorage.googleapis.com/v1alpha/projects/actual-backend-app-e626b/defaultBucket {"name":"projects/actual-backend-app-e626b/defaultBucket","location":"US-CENTRAL1","bucket":{"name":"projects/actual-backend-app-e626b/buckets/actual-backend-app-e626b.firebasestorage.app"},"storageClass":"REGIONAL"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2025-05-13T07:54:06.453Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:06.453Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:06.453Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/actual-backend-app-e626b:test [none]
+[debug] [2025-05-13T07:54:06.453Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/actual-backend-app-e626b:test [omitted]
+[debug] [2025-05-13T07:54:06.719Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/actual-backend-app-e626b:test 200
+[debug] [2025-05-13T07:54:06.719Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/actual-backend-app-e626b:test {}
+[info] +  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2025-05-13T07:54:06.721Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:06.721Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:06.721Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/actual-backend-app-e626b:test [none]
+[debug] [2025-05-13T07:54:06.721Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/actual-backend-app-e626b:test [omitted]
+[debug] [2025-05-13T07:54:06.855Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/actual-backend-app-e626b:test 200
+[debug] [2025-05-13T07:54:06.855Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/actual-backend-app-e626b:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2025-05-13T07:54:06.856Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:06.856Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:06.857Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-05-13T07:54:06.857Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:07.248Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com 200
+[debug] [2025-05-13T07:54:07.248Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-05-13T07:54:07.248Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:07.248Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:07.248Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b [none]
+[debug] [2025-05-13T07:54:07.354Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b 200
+[debug] [2025-05-13T07:54:07.354Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b {"projectNumber":"33842684769","projectId":"actual-backend-app-e626b","lifecycleState":"ACTIVE","name":"actual-backend-app","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-05-10T08:17:37.748694Z"}
+[info] i  functions: preparing codebase function for deployment 
+[info] i  functions: preparing codebase python_functions for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-05-13T07:54:07.355Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:07.355Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:07.355Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:07.355Z] Checked if tokens are valid: true, expires at: 1747126443881
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-05-13T07:54:07.356Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:07.356Z] Checked if tokens are valid: true, expires at: 1747126443881
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-05-13T07:54:07.356Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:07.356Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:07.356Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-05-13T07:54:07.356Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:07.357Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-05-13T07:54:07.357Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:07.358Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com [none]
+[debug] [2025-05-13T07:54:07.358Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:07.360Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com [none]
+[debug] [2025-05-13T07:54:07.360Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:07.712Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com 200
+[debug] [2025-05-13T07:54:07.712Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-05-13T07:54:07.755Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com 200
+[debug] [2025-05-13T07:54:07.755Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-05-13T07:54:07.825Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com 200
+[debug] [2025-05-13T07:54:07.826Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-05-13T07:54:07.868Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com 200
+[debug] [2025-05-13T07:54:07.868Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-05-13T07:54:07.868Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:07.868Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:07.868Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig [none]
+[debug] [2025-05-13T07:54:08.293Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig 200
+[debug] [2025-05-13T07:54:08.293Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig {"projectId":"actual-backend-app-e626b","storageBucket":"actual-backend-app-e626b.firebasestorage.app"}
+[debug] [2025-05-13T07:54:08.294Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:08.294Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:08.294Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/actual-backend-app-e626b/configs [none]
+[debug] [2025-05-13T07:54:08.607Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/actual-backend-app-e626b/configs 200
+[debug] [2025-05-13T07:54:08.607Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/actual-backend-app-e626b/configs {}
+[debug] [2025-05-13T07:54:08.608Z] Validating nodejs source
+[warn] !  functions: Runtime Node.js 18 was deprecated on 2025-04-30 and will be decommissioned on 2025-10-31, after which you will not be able to deploy without upgrading. Consider upgrading now to avoid disruption. See https://cloud.google.com/functions/docs/runtime-support for full details on the lifecycle policy 
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-05-13T07:54:09.815Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^5.1.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-05-13T07:54:09.816Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase function to determine what to deploy 
+[debug] [2025-05-13T07:54:09.817Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-05-13T07:54:09.824Z] Found firebase-functions binary at 'C:\GitHub\actual-backend-app\function\node_modules\.bin\firebase-functions'
+[info] Serving at port 8604
+
+[debug] [2025-05-13T07:54:10.573Z] Got response from /__/functions.yaml {"endpoints":{"onUserCreate":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","eventFilters":{"resource":"projects/actual-backend-app-e626b"},"retry":false},"labels":{},"entryPoint":"onUserCreate"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-05-13T07:54:15.604Z] Customer code is not Node
+[debug] [2025-05-13T07:54:15.604Z] Validating python source
+[debug] [2025-05-13T07:54:15.605Z] Building python source
+[info] i  functions: Loading and analyzing source code for codebase python_functions to determine what to deploy 
+[debug] [2025-05-13T07:54:15.605Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-05-13T07:54:15.610Z] Running command with virtualenv: command="C:\GitHub\actual-backend-app\python_functions\venv\Scripts\activate.bat", args=["","&&","python.exe","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2025-05-13T07:54:15.628Z] stderr: The system cannot find the path specified.
+
+[debug] [2025-05-13T07:54:15.764Z] Error: spawn "C:\GitHub\actual-backend-app\python_functions\venv\Scripts\activate.bat" ENOENT
+    at notFoundError (C:\Users\uzond\AppData\Local\nvm\v20.12.2\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:6:26)
+    at verifyENOENT (C:\Users\uzond\AppData\Local\nvm\v20.12.2\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:40:16)
+    at cp.emit (C:\Users\uzond\AppData\Local\nvm\v20.12.2\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:27:25)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-05-13T07:54:53.075Z] ----------------------------------------------------------------------
+[debug] [2025-05-13T07:54:53.077Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2025-05-13T07:54:53.077Z] CLI Version:   14.3.1
+[debug] [2025-05-13T07:54:53.078Z] Platform:      win32
+[debug] [2025-05-13T07:54:53.078Z] Node Version:  v20.12.2
+[debug] [2025-05-13T07:54:53.078Z] Time:          Tue May 13 2025 03:54:53 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-05-13T07:54:53.078Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-13T07:54:53.286Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-13T07:54:53.286Z] > authorizing via signed-in user (uzondut@gmail.com)
+[debug] [2025-05-13T07:54:53.286Z] [iam] checking project actual-backend-app-e626b for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-05-13T07:54:53.287Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:53.287Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:53.288Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions [none]
+[debug] [2025-05-13T07:54:53.288Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:53.288Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-05-13T07:54:53.473Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions 200
+[debug] [2025-05-13T07:54:53.473Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-05-13T07:54:53.473Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:53.474Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:53.474Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-05-13T07:54:53.474Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-05-13T07:54:53.679Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-05-13T07:54:53.679Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'actual-backend-app-e626b'...
+[info] 
+[info] i  deploying functions 
+[debug] [2025-05-13T07:54:53.685Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:53.685Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:53.686Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-05-13T07:54:53.686Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:54.058Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com 200
+[debug] [2025-05-13T07:54:54.058Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-05-13T07:54:54.059Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.059Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.059Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b [none]
+[debug] [2025-05-13T07:54:54.170Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b 200
+[debug] [2025-05-13T07:54:54.170Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b {"projectNumber":"33842684769","projectId":"actual-backend-app-e626b","lifecycleState":"ACTIVE","name":"actual-backend-app","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-05-10T08:17:37.748694Z"}
+[info] i  functions: preparing codebase function for deployment 
+[info] i  functions: preparing codebase python_functions for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-05-13T07:54:54.171Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.171Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.172Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.172Z] Checked if tokens are valid: true, expires at: 1747126443881
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-05-13T07:54:54.172Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.172Z] Checked if tokens are valid: true, expires at: 1747126443881
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-05-13T07:54:54.172Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.172Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.172Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-05-13T07:54:54.172Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:54.173Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-05-13T07:54:54.173Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:54.174Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com [none]
+[debug] [2025-05-13T07:54:54.174Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:54.175Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com [none]
+[debug] [2025-05-13T07:54:54.175Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T07:54:54.457Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com 200
+[debug] [2025-05-13T07:54:54.457Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-05-13T07:54:54.514Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com 200
+[debug] [2025-05-13T07:54:54.514Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-05-13T07:54:54.516Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com 200
+[debug] [2025-05-13T07:54:54.516Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-05-13T07:54:54.535Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com 200
+[debug] [2025-05-13T07:54:54.535Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-05-13T07:54:54.536Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.536Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.536Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig [none]
+[debug] [2025-05-13T07:54:54.896Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig 200
+[debug] [2025-05-13T07:54:54.897Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig {"projectId":"actual-backend-app-e626b","storageBucket":"actual-backend-app-e626b.firebasestorage.app"}
+[debug] [2025-05-13T07:54:54.897Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.897Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T07:54:54.897Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/actual-backend-app-e626b/configs [none]
+[debug] [2025-05-13T07:54:55.202Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/actual-backend-app-e626b/configs 200
+[debug] [2025-05-13T07:54:55.202Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/actual-backend-app-e626b/configs {}
+[debug] [2025-05-13T07:54:55.203Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-05-13T07:54:56.284Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^5.1.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-05-13T07:54:56.284Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase function to determine what to deploy 
+[debug] [2025-05-13T07:54:56.285Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-05-13T07:54:56.290Z] Found firebase-functions binary at 'C:\GitHub\actual-backend-app\function\node_modules\.bin\firebase-functions'
+[info] Serving at port 8326
+
+[debug] [2025-05-13T07:54:56.765Z] Got response from /__/functions.yaml {"endpoints":{"onUserCreate":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","eventFilters":{"resource":"projects/actual-backend-app-e626b"},"retry":false},"labels":{},"entryPoint":"onUserCreate"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-05-13T07:55:01.794Z] Customer code is not Node
+[debug] [2025-05-13T07:55:01.795Z] Validating python source
+[debug] [2025-05-13T07:55:01.795Z] Building python source
+[info] i  functions: Loading and analyzing source code for codebase python_functions to determine what to deploy 
+[debug] [2025-05-13T07:55:01.795Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-05-13T07:55:01.799Z] Running command with virtualenv: command="C:\GitHub\actual-backend-app\python_functions\venv\Scripts\activate.bat", args=["","&&","python.exe","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2025-05-13T07:55:01.825Z] stderr: The system cannot find the path specified.
+
+[debug] [2025-05-13T07:55:01.918Z] Error: spawn "C:\GitHub\actual-backend-app\python_functions\venv\Scripts\activate.bat" ENOENT
+    at notFoundError (C:\Users\uzond\AppData\Local\nvm\v20.12.2\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:6:26)
+    at verifyENOENT (C:\Users\uzond\AppData\Local\nvm\v20.12.2\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:40:16)
+    at cp.emit (C:\Users\uzond\AppData\Local\nvm\v20.12.2\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:27:25)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-05-13T08:02:34.846Z] ----------------------------------------------------------------------
+[debug] [2025-05-13T08:02:34.858Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2025-05-13T08:02:34.858Z] CLI Version:   14.3.1
+[debug] [2025-05-13T08:02:34.858Z] Platform:      win32
+[debug] [2025-05-13T08:02:34.858Z] Node Version:  v20.12.2
+[debug] [2025-05-13T08:02:34.858Z] Time:          Tue May 13 2025 04:02:34 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-05-13T08:02:34.858Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-13T08:02:35.090Z] Field "/functions" in "firebase.json" is possibly invalid: must be object
+[debug] [2025-05-13T08:02:35.091Z] Object "/functions/1" in "firebase.json" has unknown property: {"additionalProperty":"entryPoint"}
+[debug] [2025-05-13T08:02:35.091Z] Field "/functions" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2025-05-13T08:02:35.095Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-13T08:02:35.095Z] > authorizing via signed-in user (uzondut@gmail.com)
+[debug] [2025-05-13T08:02:35.095Z] [iam] checking project actual-backend-app-e626b for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-05-13T08:02:35.097Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:35.097Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:35.098Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions [none]
+[debug] [2025-05-13T08:02:35.098Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T08:02:35.098Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-05-13T08:02:35.386Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions 200
+[debug] [2025-05-13T08:02:35.386Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-05-13T08:02:35.386Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:35.386Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:35.386Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-05-13T08:02:35.386Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-05-13T08:02:35.599Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-05-13T08:02:35.599Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/actual-backend-app-e626b/serviceAccounts/actual-backend-app-e626b@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'actual-backend-app-e626b'...
+[info] 
+[info] i  deploying functions 
+[debug] [2025-05-13T08:02:35.603Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:35.603Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:35.603Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-05-13T08:02:35.603Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T08:02:36.160Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com 200
+[debug] [2025-05-13T08:02:36.161Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-05-13T08:02:36.161Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:36.161Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:36.161Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b [none]
+[debug] [2025-05-13T08:02:36.275Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b 200
+[debug] [2025-05-13T08:02:36.275Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b {"projectNumber":"33842684769","projectId":"actual-backend-app-e626b","lifecycleState":"ACTIVE","name":"actual-backend-app","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-05-10T08:17:37.748694Z"}
+[info] i  functions: preparing codebase function for deployment 
+[info] i  functions: preparing codebase python_functions for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-05-13T08:02:36.278Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:36.278Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:36.278Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:36.278Z] Checked if tokens are valid: true, expires at: 1747126443881
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-05-13T08:02:36.279Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:36.279Z] Checked if tokens are valid: true, expires at: 1747126443881
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-05-13T08:02:36.279Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:36.279Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:36.279Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-05-13T08:02:36.279Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T08:02:36.280Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-05-13T08:02:36.280Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T08:02:36.281Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com [none]
+[debug] [2025-05-13T08:02:36.281Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T08:02:36.283Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com [none]
+[debug] [2025-05-13T08:02:36.283Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T08:02:36.629Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com 200
+[debug] [2025-05-13T08:02:36.629Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-05-13T08:02:36.630Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com 200
+[debug] [2025-05-13T08:02:36.630Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-05-13T08:02:36.671Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com 200
+[debug] [2025-05-13T08:02:36.672Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-05-13T08:02:36.680Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com 200
+[debug] [2025-05-13T08:02:36.680Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-05-13T08:02:36.680Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:36.680Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:36.680Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig [none]
+[debug] [2025-05-13T08:02:37.116Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig 200
+[debug] [2025-05-13T08:02:37.116Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig {"projectId":"actual-backend-app-e626b","storageBucket":"actual-backend-app-e626b.firebasestorage.app"}
+[debug] [2025-05-13T08:02:37.116Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:37.116Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:02:37.116Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/actual-backend-app-e626b/configs [none]
+[debug] [2025-05-13T08:02:37.311Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/actual-backend-app-e626b/configs 200
+[debug] [2025-05-13T08:02:37.311Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/actual-backend-app-e626b/configs {}
+[debug] [2025-05-13T08:02:37.312Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-05-13T08:02:38.725Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^5.1.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-05-13T08:02:38.725Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase function to determine what to deploy 
+[debug] [2025-05-13T08:02:38.728Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-05-13T08:02:38.737Z] Found firebase-functions binary at 'C:\GitHub\actual-backend-app\function\node_modules\.bin\firebase-functions'
+[info] Serving at port 8612
+
+[debug] [2025-05-13T08:02:39.404Z] Got response from /__/functions.yaml {"endpoints":{"onUserCreate":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","eventFilters":{"resource":"projects/actual-backend-app-e626b"},"retry":false},"labels":{},"entryPoint":"onUserCreate"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-05-13T08:02:44.438Z] Customer code is not Node
+[debug] [2025-05-13T08:02:44.439Z] Validating python source
+[debug] [2025-05-13T08:02:44.439Z] Building python source
+[info] i  functions: Loading and analyzing source code for codebase python_functions to determine what to deploy 
+[debug] [2025-05-13T08:02:44.440Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-05-13T08:02:44.443Z] Running command with virtualenv: command="C:\GitHub\actual-backend-app\python_functions\venv\Scripts\activate.bat", args=["","&&","python.exe","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2025-05-13T08:02:44.475Z] stderr: The system cannot find the path specified.
+
+[debug] [2025-05-13T08:02:44.592Z] Error: spawn "C:\GitHub\actual-backend-app\python_functions\venv\Scripts\activate.bat" ENOENT
+    at notFoundError (C:\Users\uzond\AppData\Local\nvm\v20.12.2\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:6:26)
+    at verifyENOENT (C:\Users\uzond\AppData\Local\nvm\v20.12.2\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:40:16)
+    at cp.emit (C:\Users\uzond\AppData\Local\nvm\v20.12.2\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:27:25)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-05-13T08:14:25.190Z] ----------------------------------------------------------------------
+[debug] [2025-05-13T08:14:25.201Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2025-05-13T08:14:25.201Z] CLI Version:   14.3.1
+[debug] [2025-05-13T08:14:25.202Z] Platform:      win32
+[debug] [2025-05-13T08:14:25.202Z] Node Version:  v20.12.2
+[debug] [2025-05-13T08:14:25.202Z] Time:          Tue May 13 2025 04:14:25 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-05-13T08:14:25.202Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-13T08:14:25.457Z] Field "/functions" in "firebase.json" is possibly invalid: must be object
+[debug] [2025-05-13T08:14:25.457Z] Object "/functions/1" in "firebase.json" has unknown property: {"additionalProperty":"entryPoint"}
+[debug] [2025-05-13T08:14:25.458Z] Field "/functions" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2025-05-13T08:14:25.465Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-13T08:14:25.465Z] > authorizing via signed-in user (uzondut@gmail.com)
+[debug] [2025-05-13T08:14:25.636Z] java version "21.0.4" 2024-07-16 LTS
+
+[debug] [2025-05-13T08:14:25.636Z] Java(TM) SE Runtime Environment (build 21.0.4+8-LTS-274)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.4+8-LTS-274, mixed mode, sharing)
+
+[debug] [2025-05-13T08:14:25.662Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: auth, functions, firestore, hosting, pubsub, storage, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting, pubsub, storage, extensions"}}
+[debug] [2025-05-13T08:14:25.665Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:25.665Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:25.666Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-05-13T08:14:25.666Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-13T08:14:26.091Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com 200
+[debug] [2025-05-13T08:14:26.091Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-05-13T08:14:26.091Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:26.091Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:26.091Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b [none]
+[debug] [2025-05-13T08:14:26.340Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b 200
+[debug] [2025-05-13T08:14:26.340Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b {"projectNumber":"33842684769","projectId":"actual-backend-app-e626b","lifecycleState":"ACTIVE","name":"actual-backend-app","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-05-10T08:17:37.748694Z"}
+[debug] [2025-05-13T08:14:26.355Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-13T08:14:26.355Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-13T08:14:26.356Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-13T08:14:26.356Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-13T08:14:26.356Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-13T08:14:26.356Z] [pubsub] Pub/Sub Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-13T08:14:26.356Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-13T08:14:26.356Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-05-13T08:14:26.360Z] [hub] writing locator at C:\Users\uzond\AppData\Local\Temp\hub-actual-backend-app-e626b.json
+[debug] [2025-05-13T08:14:26.370Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2025-05-13T08:14:26.374Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-13T08:14:26.374Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-13T08:14:26.374Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-13T08:14:26.374Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, database, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, database, dataconnect\u001b[22m"}}
+[debug] [2025-05-13T08:14:26.408Z] defaultcredentials: writing to file C:\Users\uzond\AppData\Roaming\firebase\uzondut_gmail_com_application_default_credentials.json
+[debug] [2025-05-13T08:14:26.410Z] Setting GAC to C:\Users\uzond\AppData\Roaming\firebase\uzondut_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\uzond\\AppData\\Roaming\\firebase\\uzondut_gmail_com_application_default_credentials.json"}}
+[debug] [2025-05-13T08:14:26.411Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:26.411Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:26.411Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig [none]
+[debug] [2025-05-13T08:14:26.838Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig 200
+[debug] [2025-05-13T08:14:26.838Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig {"projectId":"actual-backend-app-e626b","storageBucket":"actual-backend-app-e626b.firebasestorage.app"}
+[debug] [2025-05-13T08:14:26.855Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-05-13T08:14:26.855Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2025-05-13T08:14:26.855Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\uzond\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","actual-backend-app-e626b","--rules","C:\\GitHub\\actual-backend-app\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\uzond\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"actual-backend-app-e626b\",\"--rules\",\"C:\\\\GitHub\\\\actual-backend-app\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2025-05-13T08:14:36.242Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2025-05-13T08:14:36.242Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-05-13T08:14:36.242Z] Starting Pub/Sub Emulator with command {"binary":"C:\\Users\\uzond\\.cache\\firebase\\emulators\\pubsub-emulator-0.8.14\\pubsub-emulator\\bin\\cloud-pubsub-emulator.bat","args":["--host=127.0.0.1","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true,"shell":true,"port":8085} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"C:\\\\Users\\\\uzond\\\\.cache\\\\firebase\\\\emulators\\\\pubsub-emulator-0.8.14\\\\pubsub-emulator\\\\bin\\\\cloud-pubsub-emulator.bat\",\"args\":[\"--host=127.0.0.1\",\"--port=8085\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true,\"shell\":true,\"port\":8085}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[info] i  storage: downloading cloud-storage-rules-runtime-v1.1.3.jar... {"metadata":{"emulator":{"name":"storage"},"message":"downloading cloud-storage-rules-runtime-v1.1.3.jar..."}}
+[debug] [2025-05-13T08:14:44.762Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.1.3.jar 
+[debug] [2025-05-13T08:14:45.043Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.1.3.jar 200
+[debug] [2025-05-13T08:14:45.043Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.1.3.jar [stream]
+[debug] [2025-05-13T08:14:50.477Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2025-05-13T08:14:51.576Z] Temp file directory for storage emulator: C:\Users\uzond\AppData\Local\Temp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: C:\\Users\\uzond\\AppData\\Local\\Temp/firebase/storage/blobs"}}
+[debug] [2025-05-13T08:14:51.586Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:51.586Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:51.586Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/actual-backend-app-e626b/sites 
+[debug] [2025-05-13T08:14:52.977Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/actual-backend-app-e626b/sites 200
+[debug] [2025-05-13T08:14:52.977Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/actual-backend-app-e626b/sites {"sites":[{"name":"projects/actual-backend-app-e626b/sites/actual-backend-app-e626b","defaultUrl":"https://actual-backend-app-e626b.web.app","appId":"1:33842684769:web:ab01e5fd7b0033aa381b20","type":"DEFAULT_SITE"}]}
+[debug] [2025-05-13T08:14:52.977Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:52.977Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:52.977Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/webApps/1:33842684769:web:ab01e5fd7b0033aa381b20/config [none]
+[debug] [2025-05-13T08:14:53.520Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/webApps/1:33842684769:web:ab01e5fd7b0033aa381b20/config 200
+[debug] [2025-05-13T08:14:53.520Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/webApps/1:33842684769:web:ab01e5fd7b0033aa381b20/config {"projectId":"actual-backend-app-e626b","appId":"1:33842684769:web:ab01e5fd7b0033aa381b20","storageBucket":"actual-backend-app-e626b.firebasestorage.app","apiKey":"AIzaSyBPU7w2FB4CGzgvNy7Q10RV9ahPMY9Yeo8","authDomain":"actual-backend-app-e626b.firebaseapp.com","messagingSenderId":"33842684769","measurementId":"G-KZSB7ZWJ16"}
+[debug] [2025-05-13T08:14:53.528Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:53.528Z] Checked if tokens are valid: true, expires at: 1747126443881
+[debug] [2025-05-13T08:14:53.528Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b [none]
+[debug] [2025-05-13T08:14:53.847Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b 200
+[debug] [2025-05-13T08:14:53.848Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b {"projectId":"actual-backend-app-e626b","projectNumber":"33842684769","displayName":"actual-backend-app","name":"projects/actual-backend-app-e626b","resources":{"hostingSite":"actual-backend-app-e626b"},"state":"ACTIVE","etag":"1_c03b2c0d-257d-4136-8a58-50bc9052b808"}
+[debug] [2025-05-13T08:14:53.848Z] Specified "public" directory "build" does not exist; Deploy to Hosting site "actual-backend-app-e626b" may fail or be empty.
+[info] i  hosting[actual-backend-app-e626b]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting[actual-backend-app-e626b]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2025-05-13T08:14:53.911Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "C:\GitHub\actual-backend-app\function" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\GitHub\\actual-backend-app\\function\" for Cloud Functions..."}}
+[debug] [2025-05-13T08:14:53.917Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-05-13T08:14:55.169Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^5.1.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-05-13T08:14:55.169Z] Building nodejs source
+[debug] [2025-05-13T08:14:55.170Z] Failed to find version of module node: reached end of search path C:\GitHub\actual-backend-app\function\node_modules
+[info] +  functions: Using node@20 from host. 
+[debug] [2025-05-13T08:14:55.175Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-05-13T08:14:55.180Z] Found firebase-functions binary at 'C:\GitHub\actual-backend-app\function\node_modules\.bin\firebase-functions'
+[info] Serving at port 8254
+
+[debug] [2025-05-13T08:14:55.910Z] Got response from /__/functions.yaml {"endpoints":{"onUserCreate":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","eventFilters":{"resource":"projects/actual-backend-app-e626b"},"retry":false},"labels":{},"entryPoint":"onUserCreate"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-05-13T08:15:00.941Z] defaultcredentials: writing to file C:\Users\uzond\AppData\Roaming\firebase\uzondut_gmail_com_application_default_credentials.json
+[debug] [2025-05-13T08:15:00.942Z] Setting GAC to C:\Users\uzond\AppData\Roaming\firebase\uzondut_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\uzond\\AppData\\Roaming\\firebase\\uzondut_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: onUserCreate. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: onUserCreate."}}
+[debug] [2025-05-13T08:15:00.945Z] addAuthTrigger {"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","resource":"projects/actual-backend-app-e626b"}}
+[info] +  functions[us-central1-onUserCreate]: auth function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mauth\u001b[22m function initialized."}}
+[info] i  functions: Watching "C:\GitHub\actual-backend-app\python_functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\GitHub\\actual-backend-app\\python_functions\" for Cloud Functions..."}}
+[debug] [2025-05-13T08:15:00.947Z] Customer code is not Node
+[debug] [2025-05-13T08:15:00.948Z] Validating python source
+[debug] [2025-05-13T08:15:00.948Z] Building python source
+[debug] [2025-05-13T08:15:00.948Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-05-13T08:15:00.951Z] Running command with virtualenv: command="C:\GitHub\actual-backend-app\python_functions\venv\Scripts\activate.bat", args=["","&&","python.exe","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2025-05-13T08:15:01.116Z] stderr: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+
+[debug] [2025-05-13T08:15:01.117Z] stderr: ModuleNotFoundError: No module named 'firebase_functions'
+
+[error] !!  functions: Failed to load function definition from source: Error: spawn "C:\GitHub\actual-backend-app\python_functions\venv\Scripts\activate.bat" ENOENT {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: Error: spawn \"C:\\GitHub\\actual-backend-app\\python_functions\\venv\\Scripts\\activate.bat\" ENOENT"}}
+[debug] [2025-05-13T08:15:01.131Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth       │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:5000 │ n/a                              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Pub/Sub        │ 127.0.0.1:8085 │ n/a                              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Storage        │ 127.0.0.1:9199 │ http://127.0.0.1:4000/storage    │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions     │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 

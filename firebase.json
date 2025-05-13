@@ -14,6 +14,8 @@
     {
       "source": "python_functions",
       "codebase": "python_functions",
+      "runtime": "python310",
+      "entryPoint": "generate_completion",
       "ignore": [
         "venv",
         ".git",
