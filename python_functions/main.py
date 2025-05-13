@@ -4,8 +4,6 @@ from firebase_functions import https_fn
 from firebase_admin import initialize_app, firestore
 from openai import OpenAI
 from dotenv import load_dotenv
-from flask import Flask, request, jsonify
-from functions_framework import create_app
 # import stripe
 import os
 import requests
@@ -68,41 +66,41 @@ def generate_completion(req: https_fn.CallableRequest) -> dict:
         return {"error": str(e)}
 
 
-@https_fn.on_call()
-def startPaymentSession(req: https_fn.CallableRequest) -> dict:
-    try:
-        if not req.auth:
-            return {"error": "Authentication required."}
+# @https_fn.on_call()
+# def startPaymentSession(req: https_fn.CallableRequest) -> dict:
+#     try:
+#         if not req.auth:
+#             return {"error": "Authentication required."}
         
-        uid = req.auth.uid
-        if not uid:
-            return {"error": "User UID not found."}
+#         uid = req.auth.uid
+#         if not uid:
+#             return {"error": "User UID not found."}
 
-        # Extract gclid and plan from the request data
-        gclid = req.data.get("gclid", "")
-        plan = req.data.get("plan", "Messagly")
+#         # Extract gclid and plan from the request data
+#         gclid = req.data.get("gclid", "")
+#         plan = req.data.get("plan", "Messagly")
 
-        # Create a Stripe Checkout Session with metadata
-        session = stripe.checkout.Session.create(
-            payment_method_types=["card"],
-            line_items=[{
-                "price": "price_1QWP6xGjBypHkVTGldP28xzF",
-                "quantity": 1,
-            }],
-            mode="payment",
-            success_url="http://localhost:3000/dashboard",
-            cancel_url="http://localhost:3000/dashboard",
-            metadata={"uid": uid, "gclid": gclid, "plan": plan}
-        )
+#         # Create a Stripe Checkout Session with metadata
+#         session = stripe.checkout.Session.create(
+#             payment_method_types=["card"],
+#             line_items=[{
+#                 "price": "price_1QWP6xGjBypHkVTGldP28xzF",
+#                 "quantity": 1,
+#             }],
+#             mode="payment",
+#             success_url="http://localhost:3000/dashboard",
+#             cancel_url="http://localhost:3000/dashboard",
+#             metadata={"uid": uid, "gclid": gclid, "plan": plan}
+#         )
 
-        # After creating the session, send the begin_checkout event to GA4
-        send_ga4_begin_checkout_event(uid, gclid, plan)
+#         # After creating the session, send the begin_checkout event to GA4
+#         send_ga4_begin_checkout_event(uid, gclid, plan)
 
-        return {"sessionId": session.id}
+#         return {"sessionId": session.id}
 
-    except Exception as e:
-        print(f"Error creating payment session: {str(e)}")
-        return {"error": str(e)}
+#     except Exception as e:
+#         print(f"Error creating payment session: {str(e)}")
+#         return {"error": str(e)}
 
 
 def send_ga4_begin_checkout_event(user_id: str, gclid: str, plan_name: str):
@@ -145,7 +143,6 @@ def send_ga4_begin_checkout_event(user_id: str, gclid: str, plan_name: str):
     except Exception as e:
         print(f"Error sending GA4 event: {str(e)}")
 
-app = create_app(globals())
 
 # @https_fn.on_request()
 # def handle_stripe_webhook(req: https_fn.Request):

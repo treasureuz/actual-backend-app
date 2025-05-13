@@ -1,6 +1,6 @@
 #!C:\GitHub\actual-backend-app\python_functions\venv\Scripts\python.exe
 # -*- coding: utf-8 -*-
-# Copyright 2025 Google LLC
+# Copyright 2024 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -60,7 +60,7 @@ class firestore_adminCallTransformer(cst.CSTTransformer):
         'get_field': ('name', ),
         'get_index': ('name', ),
         'import_documents': ('name', 'collection_ids', 'input_uri_prefix', 'namespace_ids', ),
-        'list_backups': ('parent', 'filter', ),
+        'list_backups': ('parent', ),
         'list_backup_schedules': ('parent', ),
         'list_databases': ('parent', 'show_deleted', ),
         'list_fields': ('parent', 'filter', 'page_size', 'page_token', ),

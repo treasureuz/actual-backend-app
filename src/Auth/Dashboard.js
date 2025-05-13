@@ -223,7 +223,7 @@ const Dashboard = () => {
 
     try {
       // Create a storage reference
-      const storageRefInstance = ref(storage, `profile_pictures/${user.uid}/${file.name}`);
+      const storageRefInstance = ref(storage, `profilepicture/${user.uid}/${file.name}`);
       
       // Upload the file
       await uploadBytes(storageRefInstance, file);

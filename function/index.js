@@ -13,9 +13,9 @@ admin.initializeApp();
 
 
 // HTTP function using 2nd Gen syntax
-exports.helloWorld = functionsV2.https.onRequest((req, res) => {
-     res.send("Hello from Firebase!")
- });
+// exports.helloWorld = functionsV2.https.onRequest((req, res) => {
+//      res.send("Hello from Firebase!")
+//  });
 
 // Auth trigger using 1st Gen syntax
 exports.onUserCreate = functions.auth.user().onCreate(async (user) => {
@@ -25,8 +25,8 @@ exports.onUserCreate = functions.auth.user().onCreate(async (user) => {
 
                 // Randomly select between two profile images
         const profileImages = [
-            "https://firebasestorage.googleapis.com/v0/b/imagelocation",
-            "https://firebasestorage.googleapis.com/v0/b/imagelocation"
+            "https://firebasestorage.googleapis.com/v0/b/actual-backend-app-e626b.firebasestorage.app/o/defaultprofile%2Ffemale.jpg?alt=media&token=22056dbe-5154-4fc9-af60-90cbd3917b92",
+            "https://firebasestorage.googleapis.com/v0/b/actual-backend-app-e626b.firebasestorage.app/o/defaultprofile%2Fmale.png?alt=media&token=d8e3d25d-383d-4ef6-b79c-24542d21fe2e"
         ];
         const randomProfileImage = profileImages[Math.floor(Math.random() * profileImages.length)];
         // Store profileImage and userEmails directly in the user's document in the 'userProfile' field
