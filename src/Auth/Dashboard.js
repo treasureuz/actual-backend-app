@@ -177,7 +177,7 @@ const Dashboard = () => {
         });
 
         // Call the Firebase Cloud Function to generate AI response
-        const generateAI = httpsCallable(functions, 'generateAIReply'); // Renamed cloud function
+        const generateAI = httpsCallable(functions, 'generate_completion'); // Renamed cloud function
         const result = await generateAI({ userPrompt: prompt });
 
         if (result.data && result.data.reply) {
