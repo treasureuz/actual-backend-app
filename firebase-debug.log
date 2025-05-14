@@ -1,0 +1,163 @@
+[debug] [2025-05-14T06:34:53.333Z] ----------------------------------------------------------------------
+[debug] [2025-05-14T06:34:53.352Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2025-05-14T06:34:53.353Z] CLI Version:   14.3.1
+[debug] [2025-05-14T06:34:53.353Z] Platform:      win32
+[debug] [2025-05-14T06:34:53.355Z] Node Version:  v20.12.2
+[debug] [2025-05-14T06:34:53.356Z] Time:          Wed May 14 2025 02:34:53 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-05-14T06:34:53.356Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-14T06:34:53.938Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-14T06:34:53.939Z] > authorizing via signed-in user (uzondut@gmail.com)
+[debug] [2025-05-14T06:34:54.450Z] java version "21.0.4" 2024-07-16 LTS
+Java(TM) SE Runtime Environment (build 21.0.4+8-LTS-274)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.4+8-LTS-274, mixed mode, sharing)
+
+[debug] [2025-05-14T06:34:54.495Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: auth, functions, firestore, hosting, pubsub, storage, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting, pubsub, storage, extensions"}}
+[debug] [2025-05-14T06:34:54.500Z] Checked if tokens are valid: false, expires at: 1747136649307
+[debug] [2025-05-14T06:34:54.500Z] Checked if tokens are valid: false, expires at: 1747136649307
+[debug] [2025-05-14T06:34:54.501Z] > refreshing access token with scopes: []
+[debug] [2025-05-14T06:34:54.503Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-05-14T06:34:54.504Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-14T06:34:54.911Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-05-14T06:34:54.911Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-14T06:34:54.929Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-05-14T06:34:54.930Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/actual-backend-app-e626b
+[debug] [2025-05-14T06:34:56.774Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com 200
+[debug] [2025-05-14T06:34:56.774Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/actual-backend-app-e626b/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-05-14T06:34:56.774Z] Checked if tokens are valid: true, expires at: 1747208093912
+[debug] [2025-05-14T06:34:56.774Z] Checked if tokens are valid: true, expires at: 1747208093912
+[debug] [2025-05-14T06:34:56.774Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b [none]
+[debug] [2025-05-14T06:34:57.371Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b 200
+[debug] [2025-05-14T06:34:57.371Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/actual-backend-app-e626b {"projectNumber":"33842684769","projectId":"actual-backend-app-e626b","lifecycleState":"ACTIVE","name":"actual-backend-app","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-05-10T08:17:37.748694Z"}
+[debug] [2025-05-14T06:34:57.558Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-14T06:34:57.558Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-14T06:34:57.558Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-14T06:34:57.558Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-14T06:34:57.558Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-14T06:34:57.558Z] [pubsub] Pub/Sub Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-14T06:34:57.558Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-14T06:34:57.558Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-05-14T06:34:57.611Z] [hub] writing locator at C:\Users\uzond\AppData\Local\Temp\hub-actual-backend-app-e626b.json
+[debug] [2025-05-14T06:34:57.785Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2025-05-14T06:34:57.790Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-14T06:34:57.790Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-14T06:34:57.790Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-05-14T06:34:57.790Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8085}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, database, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, database, dataconnect\u001b[22m"}}
+[debug] [2025-05-14T06:34:57.891Z] defaultcredentials: writing to file C:\Users\uzond\AppData\Roaming\firebase\uzondut_gmail_com_application_default_credentials.json
+[debug] [2025-05-14T06:34:57.895Z] Setting GAC to C:\Users\uzond\AppData\Roaming\firebase\uzondut_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\uzond\\AppData\\Roaming\\firebase\\uzondut_gmail_com_application_default_credentials.json"}}
+[debug] [2025-05-14T06:34:57.895Z] Checked if tokens are valid: true, expires at: 1747208093912
+[debug] [2025-05-14T06:34:57.895Z] Checked if tokens are valid: true, expires at: 1747208093912
+[debug] [2025-05-14T06:34:57.896Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig [none]
+[debug] [2025-05-14T06:34:58.572Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig 200
+[debug] [2025-05-14T06:34:58.572Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/adminSdkConfig {"projectId":"actual-backend-app-e626b","storageBucket":"actual-backend-app-e626b.firebasestorage.app"}
+[debug] [2025-05-14T06:34:58.862Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-05-14T06:34:58.862Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2025-05-14T06:34:58.862Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\uzond\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","actual-backend-app-e626b","--rules","C:\\Users\\uzond\\OneDrive\\Desktop\\GitHub\\actual-backend-app\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\uzond\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"actual-backend-app-e626b\",\"--rules\",\"C:\\\\Users\\\\uzond\\\\OneDrive\\\\Desktop\\\\GitHub\\\\actual-backend-app\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2025-05-14T06:35:24.860Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2025-05-14T06:35:24.860Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-05-14T06:35:24.860Z] Starting Pub/Sub Emulator with command {"binary":"C:\\Users\\uzond\\.cache\\firebase\\emulators\\pubsub-emulator-0.8.14\\pubsub-emulator\\bin\\cloud-pubsub-emulator.bat","args":["--host=127.0.0.1","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true,"shell":true,"port":8085} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"C:\\\\Users\\\\uzond\\\\.cache\\\\firebase\\\\emulators\\\\pubsub-emulator-0.8.14\\\\pubsub-emulator\\\\bin\\\\cloud-pubsub-emulator.bat\",\"args\":[\"--host=127.0.0.1\",\"--port=8085\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true,\"shell\":true,\"port\":8085}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2025-05-14T06:35:32.471Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2025-05-14T06:35:34.650Z] Temp file directory for storage emulator: C:\Users\uzond\AppData\Local\Temp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: C:\\Users\\uzond\\AppData\\Local\\Temp/firebase/storage/blobs"}}
+[debug] [2025-05-14T06:35:34.658Z] Checked if tokens are valid: true, expires at: 1747208093912
+[debug] [2025-05-14T06:35:34.658Z] Checked if tokens are valid: true, expires at: 1747208093912
+[debug] [2025-05-14T06:35:34.660Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/actual-backend-app-e626b/sites 
+[debug] [2025-05-14T06:35:35.059Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/actual-backend-app-e626b/sites 200
+[debug] [2025-05-14T06:35:35.059Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/actual-backend-app-e626b/sites {"sites":[{"name":"projects/actual-backend-app-e626b/sites/actual-backend-app-e626b","defaultUrl":"https://actual-backend-app-e626b.web.app","appId":"1:33842684769:web:ab01e5fd7b0033aa381b20","type":"DEFAULT_SITE"}]}
+[debug] [2025-05-14T06:35:35.059Z] Checked if tokens are valid: true, expires at: 1747208093912
+[debug] [2025-05-14T06:35:35.059Z] Checked if tokens are valid: true, expires at: 1747208093912
+[debug] [2025-05-14T06:35:35.059Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/webApps/1:33842684769:web:ab01e5fd7b0033aa381b20/config [none]
+[debug] [2025-05-14T06:35:35.566Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/webApps/1:33842684769:web:ab01e5fd7b0033aa381b20/config 200
+[debug] [2025-05-14T06:35:35.567Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b/webApps/1:33842684769:web:ab01e5fd7b0033aa381b20/config {"projectId":"actual-backend-app-e626b","appId":"1:33842684769:web:ab01e5fd7b0033aa381b20","storageBucket":"actual-backend-app-e626b.firebasestorage.app","apiKey":"AIzaSyBPU7w2FB4CGzgvNy7Q10RV9ahPMY9Yeo8","authDomain":"actual-backend-app-e626b.firebaseapp.com","messagingSenderId":"33842684769","measurementId":"G-KZSB7ZWJ16"}
+[debug] [2025-05-14T06:35:35.644Z] Checked if tokens are valid: true, expires at: 1747208093912
+[debug] [2025-05-14T06:35:35.645Z] Checked if tokens are valid: true, expires at: 1747208093912
+[debug] [2025-05-14T06:35:35.645Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b [none]
+[debug] [2025-05-14T06:35:35.884Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b 200
+[debug] [2025-05-14T06:35:35.885Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/actual-backend-app-e626b {"projectId":"actual-backend-app-e626b","projectNumber":"33842684769","displayName":"actual-backend-app","name":"projects/actual-backend-app-e626b","resources":{"hostingSite":"actual-backend-app-e626b"},"state":"ACTIVE","etag":"1_c03b2c0d-257d-4136-8a58-50bc9052b808"}
+[info] i  hosting[actual-backend-app-e626b]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting[actual-backend-app-e626b]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2025-05-14T06:35:35.924Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "C:\Users\uzond\OneDrive\Desktop\GitHub\actual-backend-app\function" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\uzond\\OneDrive\\Desktop\\GitHub\\actual-backend-app\\function\" for Cloud Functions..."}}
+[debug] [2025-05-14T06:35:35.937Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2025-05-14T06:35:37.502Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^5.1.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-05-14T06:35:37.502Z] Building nodejs source
+[debug] [2025-05-14T06:35:37.503Z] Failed to find version of module node: reached end of search path C:\Users\uzond\OneDrive\Desktop\GitHub\actual-backend-app\function\node_modules
+[info] +  functions: Using node@20 from host. 
+[debug] [2025-05-14T06:35:37.507Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-05-14T06:35:37.515Z] Found firebase-functions binary at 'C:\Users\uzond\OneDrive\Desktop\GitHub\actual-backend-app\node_modules\.bin\firebase-functions'
+[info] Serving at port 8674
+
+[error] TypeError: Cannot read properties of undefined (reading 'user')
+    at Object.<anonymous> (C:\Users\uzond\OneDrive\Desktop\GitHub\actual-backend-app\function\index.js:21:39)
+    at Module._compile (node:internal/modules/cjs/loader:1369:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1427:10)
+    at Module.load (node:internal/modules/cjs/loader:1206:32)
+    at Module._load (node:internal/modules/cjs/loader:1022:12)
+    at Module.require (node:internal/modules/cjs/loader:1231:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (C:\Users\uzond\OneDrive\Desktop\GitHub\actual-backend-app\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\uzond\OneDrive\Desktop\GitHub\actual-backend-app\node_modules\firebase-functions\lib\runtime\loader.js:157:23)
+    at C:\Users\uzond\OneDrive\Desktop\GitHub\actual-backend-app\node_modules\firebase-functions\lib\bin\firebase-functions.js:56:56
+
+[debug] [2025-05-14T06:35:39.974Z] Got response code 400; body Failed to generate manifest from function source: TypeError: Cannot read properties of undefined (reading 'user')
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[info] i  functions: Watching "C:\Users\uzond\OneDrive\Desktop\GitHub\actual-backend-app\python_functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\uzond\\OneDrive\\Desktop\\GitHub\\actual-backend-app\\python_functions\" for Cloud Functions..."}}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: could not deploy functions because the "python_functions" directory was not found. Please create it or specify a different source directory in firebase.json {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: could not deploy functions because the \u001b[1m\"python_functions\"\u001b[22m directory was not found. Please create it or specify a different source directory in firebase.json"}}
+[debug] [2025-05-14T06:35:45.100Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth       │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:5000 │ n/a                              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Pub/Sub        │ 127.0.0.1:8085 │ n/a                              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Storage        │ 127.0.0.1:9199 │ http://127.0.0.1:4000/storage    │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions     │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
